@@ -36,8 +36,9 @@ the paper in a single LaTeX file and then using \input to read the
 content into three different files with different preambles.  One in the
 journal proprietary final format, one in a standard format for
 self-publication, and one in a draft format for comments and co-authors.&lt;/p&gt;
-&lt;p&gt;The tools take some time to set up, but being able to write in plain
-text with a powerful text editor is a joy.&lt;/p&gt;</summary></entry><entry><title>Class Lectures in Markdown</title><link href="http://dsoto.github.io/blog/2014/01/31/class-lectures-in-markdown/" rel="alternate"></link><updated>2014-01-31T20:00:00-08:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2014-01-31:blog/2014/01/31/class-lectures-in-markdown/</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;The markdown and pandoc tools take some time to set up, but being able
+to write in plain text with very light markup in a powerful text
+editor is a joy.&lt;/p&gt;</summary></entry><entry><title>Class Lectures in Markdown</title><link href="http://dsoto.github.io/blog/2014/01/31/class-lectures-in-markdown/" rel="alternate"></link><updated>2014-01-31T20:00:00-08:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2014-01-31:blog/2014/01/31/class-lectures-in-markdown/</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;I have a workflow that I'm happy with for creating, rendering, and
 archiving, slide content for my classes.&lt;/p&gt;
 &lt;p&gt;I have a single file that contains stubs for the entire semester's
