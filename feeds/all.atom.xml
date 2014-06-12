@@ -1,20 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Soto</title><link href="http://dsoto.github.io/" rel="alternate"></link><link href="http://dsoto.github.io/feeds/all.atom.xml" rel="self"></link><id>http://dsoto.github.io/</id><updated>2013-10-18T12:30:00-07:00</updated><entry><title>Refrigeration lifecycle costs and insulation thickness</title><link href="http://dsoto.github.io/blog/2013/10/18/refrigeration-lifecycle-costs-and-insulation-thickness/" rel="alternate"></link><updated>2013-10-18T12:30:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2013-10-18:blog/2013/10/18/refrigeration-lifecycle-costs-and-insulation-thickness/</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Soto</title><link href="http://dsoto.github.io/" rel="alternate"></link><link href="http://dsoto.github.io/feeds/all.atom.xml" rel="self"></link><id>http://dsoto.github.io/</id><updated>2014-06-12T10:00:00-07:00</updated><entry><title>Markdown and Pandoc for writing</title><link href="http://dsoto.github.io/blog/2014/06/12/markdown-and-pandoc-for-writing/" rel="alternate"></link><updated>2014-06-12T10:00:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2014-06-12:blog/2014/06/12/markdown-and-pandoc-for-writing/</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;I've been using Markdown, a plain text lightweight markup language in
+combination with Pandoc, a versatile document converter to do the bulk
+of my writing.&lt;/p&gt;
+&lt;p&gt;The benefits&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I can use the same text editing tools for my computing work as well as
+  my writing work.&lt;/li&gt;
+&lt;li&gt;With a generic makefile, I can compile the markdown file into PDF,
+  HTML and DOCX with a single command.  This allows me to use the tools
+  I am most comfortable with and send drafts to colleagues in whichever
+  format they are most comfortable with.&lt;/li&gt;
+&lt;li&gt;I can post the markdown file to my Github account and it is visible as
+  a rendered document instead of the plaintext.  This allows me to
+  quickly update documents and make them available publicly with very
+  little effort.  I can update the document and push it to Github and it
+  is immediately visible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This works very well for teaching documents and other short pieces.  It
+doesn't have all the features I need for writing conference and journal
+papers.  I tried valiantly to use Markdown and Pandoc for a recent
+conference submission but had two main problems.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It is not straightforward to use references and labels using Markdown.
+  This is important when you need to refer to figures and tables.&lt;/li&gt;
+&lt;li&gt;Two column formatting and tables.  My conference template is in a two
+  column format and I wasn't able to include a table in the two column
+  mode.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The lightweight syntax and features of Markdown excel when there will be
+no page formatting or page breaks.  I had to fall back to LaTeX for the
+submission.&lt;/p&gt;
+&lt;p&gt;I was able to create a multi-output workflow by placing the content of
+the paper in a single LaTeX file and then using \input to read the
+content into three different files with different preambles.  One in the
+journal proprietary final format, one in a standard format for
+self-publication, and one in a draft format for comments and co-authors.&lt;/p&gt;
+&lt;p&gt;The tools take some time to set up, but being able to write in plain
+text with a powerful text editor is a joy.&lt;/p&gt;</summary></entry><entry><title>Class Lectures in Markdown</title><link href="http://dsoto.github.io/blog/2014/01/31/class-lectures-in-markdown/" rel="alternate"></link><updated>2014-01-31T20:00:00-08:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2014-01-31:blog/2014/01/31/class-lectures-in-markdown/</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;I have a workflow that I'm happy with for creating, rendering, and
+archiving, slide content for my classes.&lt;/p&gt;
+&lt;p&gt;I have a single file that contains stubs for the entire semester's
+lectures.  This allows me to quickly capture ideas for future lectures
+without leaving the file.&lt;/p&gt;
+&lt;p&gt;At the beginning of the semester, I run a script that creates stubs for
+each lecture with slide headers and dates.&lt;/p&gt;
+&lt;p&gt;I started pooling all my figures into a single folder and then using
+symbolic links from each class directory to the same figure folder.
+This lets me cut and paste slides easily and recompile with the figures
+being linked correctly.&lt;/p&gt;
+&lt;p&gt;Once a lecture is complete, I copy that lecture's text into a separate
+file lecture-NN.md.&lt;/p&gt;
+&lt;p&gt;I use Pandoc with the Beamer option to create PDF slides.&lt;/p&gt;
+&lt;p&gt;Using Make and the wildcard function I can compile PDFs for all the
+markdown files.&lt;/p&gt;
+&lt;p&gt;Rather than page through the separate older files, I concatenate them
+into a single markdown file and render a pdf.  This allows me to quickly
+see what I've already covered.&lt;/p&gt;
+&lt;p&gt;I was a Keynote user for a long time, but I found it cumbersome to
+retrieve old figures from inside previous presentations.  Having all
+figures exposed as files makes reuse quicker for me.&lt;/p&gt;</summary></entry><entry><title>LabJack U12 Data Acquisition Device and IPython Notebook</title><link href="http://dsoto.github.io/blog/2013/11/11/labjack-u12-data-acquisition-device-and-ipython-notebook/" rel="alternate"></link><updated>2013-11-11T12:40:00-08:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2013-11-11:blog/2013/11/11/labjack-u12-data-acquisition-device-and-ipython-notebook/</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;These calculations estimate the optimal thickness of insulation for a simplified refrigerator model. The life-cycle cost considers both the first cost of purchasing insulation and the operational cost of buying electricity to power the refrigerator. We assume that the other costs (exterior, compressor, etc.) are fixed with the insulation thickness and therefore do not affect the optimum thickness.&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\[ 
-\textrm{Life Cycle Cost} 
-= \textrm{Captial Cost} + \textrm{Operational Cost}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\[ \textrm{Captial Cost (USD/year)} = \textrm{Initial Cost (USD)} \cdot \textrm{Cost of Capital (1/year)} \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\[ \textrm{Operational Cost (USD/year)} = 
-\textrm{Energy Use (kWh/year)} \cdot \textrm{Electricity Cost (USD/kWh)} \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The initial cost is based on the volume of insulation and the operational cost is based on the resulting energy use. As the volume of insulation increases, the capital cost rises and the operational cost decreases.&lt;/p&gt;
-&lt;p&gt;Below are the assumptions in the calculation.&lt;/p&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[1]:
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;u12&lt;/span&gt;          &lt;span class="c"&gt;# this is the labjack device library&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[2]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;u12&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;U12&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;       &lt;span class="c"&gt;# initializes device&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[3]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# sets up an output data file&lt;/span&gt;
+&lt;span class="n"&gt;fout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;labjack.txt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;wa&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;This defines two convenience functions to encapsulate the details of reading the shunt resistor and battery voltage.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[4]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# channel = 0 sets to single-ended input for AI0&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;readVoltage&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eAnalogIn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;channel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;voltage&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="c"&gt;# setting channel to 9 takes the differential between AI2 and AI3&lt;/span&gt;
+&lt;span class="c"&gt;# gain setting of 7 is for a +/- 1 volt range&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;readCurrent&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eAnalogIn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;channel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;gain&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;voltage&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Executes a loop to read current and voltage, take timestamp and write to file.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[5]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# get initial timestamp&lt;/span&gt;
+&lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="c"&gt;# find time interval between start of test and now&lt;/span&gt;
+    &lt;span class="n"&gt;now&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;ts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;total_seconds&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;readCurrent&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;readVoltage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="c"&gt;# write csv to file&lt;/span&gt;
+    &lt;span class="n"&gt;fout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ts&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;fout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flush&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_pyerr"&gt;
+&lt;pre&gt;
+&lt;span class="ansired"&gt;---------------------------------------------------------------------------&lt;/span&gt;
+&lt;span class="ansired"&gt;KeyboardInterrupt&lt;/span&gt;                         Traceback (most recent call last)
+&lt;span class="ansigreen"&gt;&amp;lt;ipython-input-5-b1e7aeb9c6a1&amp;gt;&lt;/span&gt; in &lt;span class="ansicyan"&gt;&amp;lt;module&amp;gt;&lt;/span&gt;&lt;span class="ansiblue"&gt;()&lt;/span&gt;
+&lt;span class="ansigreen"&gt;     10&lt;/span&gt;     fout&lt;span class="ansiblue"&gt;.&lt;/span&gt;write&lt;span class="ansiblue"&gt;(&lt;/span&gt;str&lt;span class="ansiblue"&gt;(&lt;/span&gt;ts&lt;span class="ansiblue"&gt;)&lt;/span&gt;&lt;span class="ansiblue"&gt;+&lt;/span&gt;&lt;span class="ansiblue"&gt;&amp;apos;,&amp;apos;&lt;/span&gt;&lt;span class="ansiblue"&gt;+&lt;/span&gt;str&lt;span class="ansiblue"&gt;(&lt;/span&gt;v&lt;span class="ansiblue"&gt;)&lt;/span&gt;&lt;span class="ansiblue"&gt;+&lt;/span&gt;&lt;span class="ansiblue"&gt;&amp;apos;,&amp;apos;&lt;/span&gt;&lt;span class="ansiblue"&gt;+&lt;/span&gt;str&lt;span class="ansiblue"&gt;(&lt;/span&gt;c&lt;span class="ansiblue"&gt;)&lt;/span&gt;&lt;span class="ansiblue"&gt;+&lt;/span&gt;&lt;span class="ansiblue"&gt;&amp;apos;\n&amp;apos;&lt;/span&gt;&lt;span class="ansiblue"&gt;)&lt;/span&gt;&lt;span class="ansiblue"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;     11&lt;/span&gt;     fout&lt;span class="ansiblue"&gt;.&lt;/span&gt;flush&lt;span class="ansiblue"&gt;(&lt;/span&gt;&lt;span class="ansiblue"&gt;)&lt;/span&gt;&lt;span class="ansiblue"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;---&amp;gt; 12&lt;/span&gt;&lt;span class="ansired"&gt;     &lt;/span&gt;time&lt;span class="ansiblue"&gt;.&lt;/span&gt;sleep&lt;span class="ansiblue"&gt;(&lt;/span&gt;&lt;span class="ansicyan"&gt;1.0&lt;/span&gt;&lt;span class="ansiblue"&gt;)&lt;/span&gt;&lt;span class="ansiblue"&gt;&lt;/span&gt;
+
+&lt;span class="ansired"&gt;KeyboardInterrupt&lt;/span&gt;: &lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;This is the output in the file. Note that there is about 30 msec of overhead in the loop. There are ways to do synchronous capture, but most of my energy applications don't need that level of timebase precision.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[6]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;!&lt;/span&gt;tail labjack.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
+&lt;pre&gt;
+18.564275,4.5947265625,-0.044921875
+19.595143,4.5947265625,-0.04443359375
+20.627395,4.5947265625,-0.04541015625
+21.659249,4.5947265625,-0.044921875
+22.683053,4.5947265625,-0.044921875
+23.715622,4.599609375,-0.044921875
+24.747434,4.6044921875,-0.044921875
+25.779089,4.5947265625,-0.04443359375
+26.80343,4.5947265625,-0.044921875
+27.835673,4.599609375,-0.044921875
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;Creative Commons Attribution 3.0 Unported License&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Refrigeration lifecycle costs and insulation thickness</title><link href="http://dsoto.github.io/blog/2013/10/18/refrigeration-lifecycle-costs-and-insulation-thickness/" rel="alternate"></link><updated>2013-10-18T12:30:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2013-10-18:blog/2013/10/18/refrigeration-lifecycle-costs-and-insulation-thickness/</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[1]:
 &lt;/div&gt;
@@ -53,8 +257,8 @@ In&amp;nbsp;[1]:
 &lt;p&gt;&lt;span class="math"&gt;\[V_{insulation} = \frac{4 \pi}{3} (r_2^3 - r_1^3)\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;There are several other assumptions for insulation cost, cost of capital, and heat pump efficiency.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[2]:
 &lt;/div&gt;
@@ -84,8 +288,8 @@ In&amp;nbsp;[2]:
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="insulation-thickness-for-inexpensive-electricity"&gt;Insulation thickness for inexpensive electricity&lt;/h2&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[3]:
 &lt;/div&gt;
@@ -101,11 +305,11 @@ In&amp;nbsp;[3]:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_display_data"&gt;
 
 
@@ -372,8 +576,8 @@ BiYGIiLSwMRAREQamBiIiEgDEwMREWn4f7noYXt0rH9ZAAAAAElFTkSuQmCC
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="insulation-thickness-for-expensive-electricity"&gt;Insulation thickness for expensive electricity&lt;/h1&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[4]:
 &lt;/div&gt;
@@ -389,11 +593,11 @@ In&amp;nbsp;[4]:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_display_data"&gt;
 
 
@@ -678,8 +882,8 @@ kw8AAAAASUVORK5CYII=
 &lt;p&gt;We notice that at higher electricity cost, the yearly cost increases and we must have a better insulated cabinet. Keep in mind that the yearly cost does not include the other refrigeration components so it is an underestimation.&lt;/p&gt;
 &lt;p&gt;Insulation is usually the most cost-effective approach to lowering life-cycle costs for refrigeration. However, since traditional blown polyurethane insulation is relatively expensive, higher electricity costs mean the yearly cost of refrigeration is expensive even for efficient refrigerators. At some point, the high cost of electricity in many rural markets will make the cost of refrigeration services to expensive for the local customers.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[4]:
 &lt;/div&gt;
@@ -693,30 +897,8 @@ In&amp;nbsp;[4]:
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;Creative Commons Attribution 3.0 Unported License&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Refrigeration cost of conserved energy</title><link href="http://dsoto.github.io/blog/2013/10/10/refrigeration-cost-of-conserved-energy/" rel="alternate"></link><updated>2013-10-10T11:40:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2013-10-10:blog/2013/10/10/refrigeration-cost-of-conserved-energy/</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Typical refrigerators in rural environments with photovoltaic electricity tend to strain the inverters. There are some very energy efficient refrigerator models as well but the cost for these units is much higher.&lt;/p&gt;
-&lt;p&gt;We compare between two representative refrigerators.&lt;/p&gt;
-&lt;p&gt;A typical refrigerator is the Haier, which is basically what we in the states might call a &amp;quot;dorm room refrigerator&amp;quot;.&lt;/p&gt;
-&lt;h3 id="haier"&gt;Haier&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;$129 purchase cost&lt;/li&gt;
-&lt;li&gt;71 L capacity&lt;/li&gt;
-&lt;li&gt;821 wh per day&lt;/li&gt;
-&lt;li&gt;HNSEW025&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The Sundanzer is a well-insulated refrigerator with an improved compressor allowing for much better energy performance.&lt;/p&gt;
-&lt;h3 id="sundanzer"&gt;Sundanzer&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;$700 initial cost&lt;/li&gt;
-&lt;li&gt;50 L capacity&lt;/li&gt;
-&lt;li&gt;freezer 280 wh per day at 32C&lt;/li&gt;
-&lt;li&gt;refrigerator 114 wh per day at 32 C&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To compare these two options, I use the cost of conserved energy which is the ratio of the difference in finance cost over the difference in energy consumption. This can be interpreted as the price of avoided energy allowing a direct comparison with the current or future energy costs.&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(CCE = \frac{\textrm{annualized investment cost}}{\textrm{annual energy savings}}\)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[1]:
 &lt;/div&gt;
@@ -732,8 +914,8 @@ In&amp;nbsp;[1]:
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;We set up two data dictionaries to store the refrigerator performance parameters.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[2]:
 &lt;/div&gt;
@@ -754,8 +936,8 @@ In&amp;nbsp;[2]:
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;We calculate the annual energy savings between the two refrigerators.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[3]:
 &lt;/div&gt;
@@ -770,11 +952,11 @@ In&amp;nbsp;[3]:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
 &lt;pre&gt;
 258.055 kWh saved per year
@@ -790,8 +972,8 @@ In&amp;nbsp;[3]:
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;The initial cost difference between the two refrigerators is&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[4]:
 &lt;/div&gt;
@@ -803,11 +985,11 @@ In&amp;nbsp;[4]:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
 &lt;pre&gt;
 difference in initial purchase cost 571.0 USD
@@ -831,13 +1013,13 @@ difference in initial purchase cost 571.0 USD
 &lt;h2 id="impact-of-financing"&gt;Impact of financing&lt;/h2&gt;
 &lt;p&gt;We can also calculate this over a range of financing options and visualize the result. We add the cost of capital and the discounted energy costs over a longer time period in this calculation.&lt;/p&gt;
 &lt;p&gt;We use from Meier 1984,&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(CCE = \frac{\textrm{investment}}{\textrm{annual energy savings}} \cdot \frac{d}{1 - (1+d)^{-n}}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;$ CCE =   $&lt;/p&gt;
 &lt;p&gt;Where the annualized investment cost now contains the capital recovery function.&lt;/p&gt;
 &lt;h2 id="contour-plotting-of-cost-of-conserved-energy"&gt;Contour plotting of cost of conserved energy&lt;/h2&gt;
 &lt;p&gt;Below I set up a contour plot with the interest rate on the vertical axis and the finance period in years on the horizontal axis.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[5]:
 &lt;/div&gt;
@@ -865,11 +1047,11 @@ In&amp;nbsp;[5]:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_display_data"&gt;
 
 
@@ -1341,12 +1523,8 @@ cDgcDscq/we8r/3kfQGjhgAAAABJRU5ErkJggg==
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;Creative Commons Attribution 3.0 Unported License&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Energy cost of beverage cooling</title><link href="http://dsoto.github.io/blog/2013/10/10/energy-cost-of-beverage-cooling/" rel="alternate"></link><updated>2013-10-10T09:50:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2013-10-10:blog/2013/10/10/energy-cost-of-beverage-cooling/</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Here I calculate the energy needed to cool a beverage. I also estimate the cost of this energy.&lt;/p&gt;
-&lt;p&gt;I start by calculating the sensible heat that must be extracted from a can or bottle.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[7]:
 &lt;/div&gt;
@@ -1371,11 +1549,11 @@ In&amp;nbsp;[7]:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
 &lt;pre&gt;
 sensible heat (joules) = 52318.75
@@ -1396,8 +1574,8 @@ sensible heat (kWh) = 0.015
 &lt;p&gt;Each beverage has an average residence time in the refrigerator. We can estimate the energy use per can for storage by&lt;/p&gt;
 &lt;p&gt;&lt;span class="math"&gt;\[ \frac{\textrm{energy used per unit time}}{\textrm{cans sold per unit time}} \]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[13]:
 &lt;/div&gt;
@@ -1415,11 +1593,11 @@ In&amp;nbsp;[13]:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
 &lt;pre&gt;
 storage kWh per can 0.08
