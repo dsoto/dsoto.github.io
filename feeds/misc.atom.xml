@@ -1,5 +1,271 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Soto</title><link href="http://dsoto.github.io/" rel="alternate"></link><link href="http://dsoto.github.io/feeds/misc.atom.xml" rel="self"></link><id>http://dsoto.github.io/</id><updated>2014-06-12T10:00:00-07:00</updated><entry><title>Markdown and Pandoc for writing</title><link href="http://dsoto.github.io/blog/2014/06/12/markdown-and-pandoc-for-writing/" rel="alternate"></link><updated>2014-06-12T10:00:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2014-06-12:blog/2014/06/12/markdown-and-pandoc-for-writing/</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Soto</title><link href="http://dsoto.github.io/" rel="alternate"></link><link href="http://dsoto.github.io/feeds/misc.atom.xml" rel="self"></link><id>http://dsoto.github.io/</id><updated>2014-07-17T12:00:00-07:00</updated><entry><title>SciPy 2014</title><link href="http://dsoto.github.io/blog/2014/07/17/scipy-2014/" rel="alternate"></link><updated>2014-07-17T12:00:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2014-07-17:blog/2014/07/17/scipy-2014/</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;I'm attending the SciPy conference this year with two main objectives&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Look for best practices to integrate into my research on energy access&lt;/li&gt;
+&lt;li&gt;Look for best practices to integrate into my teaching&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Energy software&lt;/h1&gt;
+&lt;p&gt;I'm interested in the development of open-source solutions in the
+small-scale energy analysis space.  There are free tools like PVWatts
+and paid tools like HOMER but in my experience (please let me know
+otherwise) the source code is not available.  I've also seen some
+economy-scale tools like TEMOA.  I'm interested in the creation of tools
+for the calculation of the solar photovoltaic resource that are
+extensible and open.  This means taking special care in the creation of
+the API and architecture.  I'm also interested in the readability of the
+code so that it can be approached by new contributors.&lt;/p&gt;
+&lt;h1&gt;Teaching&lt;/h1&gt;
+&lt;p&gt;Many of my students are very interested in careers that will influence
+our energy systems.  They are often dismayed when they learn that
+quantitative skills play a large part in these careers.  A second
+difficulty students deal with is the communication of quantitative
+results.  I'm interested in how the tools in scientific computing can be
+used to address both of these problems.  Students currently use a
+combination of ink, paper, and a hand-held calculator to arrive at
+estimations and communicate results.  This creates many opportunities
+for transcription or computational errors that cannot be diagnosed.  Now
+that many free tools like Sage or IPython Notebook can approach the ease
+of use of Mathematica or Mathcad without licensing headaches, I'm eager
+to try them in the classroom.&lt;/p&gt;</summary></entry><entry><title>Equivalent APR of M-KOPA Financing</title><link href="http://dsoto.github.io/blog/2014/06/16/equivalent-apr-of-m-kopa-financing/" rel="alternate"></link><updated>2014-06-16T12:00:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2014-06-16:blog/2014/06/16/equivalent-apr-of-m-kopa-financing/</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Many customers are unable to purchase solar home systems for lighting and phone charging without a financing option. For a customer to compare between the rate available from a microfinance lender and a company that provides in-house finance, they must compare the effective interest rates. M-KOPA advertises their deposit and daily payments online and the effective APR can be calculated from this.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class="header"&gt;
+&lt;th align="left"&gt;device&lt;/th&gt;
+&lt;th align="left"&gt;initial cost&lt;/th&gt;
+&lt;th align="left"&gt;deposit&lt;/th&gt;
+&lt;th align="left"&gt;daily payment&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class="odd"&gt;
+&lt;td align="left"&gt;d10g&lt;/td&gt;
+&lt;td align="left"&gt;?&lt;/td&gt;
+&lt;td align="left"&gt;2500 KSH&lt;/td&gt;
+&lt;td align="left"&gt;40 KSH&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="even"&gt;
+&lt;td align="left"&gt;d20g&lt;/td&gt;
+&lt;td align="left"&gt;17540 KSH&lt;/td&gt;
+&lt;td align="left"&gt;2999 KSH&lt;/td&gt;
+&lt;td align="left"&gt;50 KSH&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The retail cost for the d.light d20g system is listed on Amazon as 199 USD. At an exchange rate of 87.7 KSH to 1 USD, the initial cost is 17540 KSH. I'm not aware of a published retail price for the d10g product.&lt;/p&gt;
+&lt;p&gt;From the daily payment, the loan length, and the initial cost I can calculate the equivalent daily interest rate for the loan that M-KOPA provides to their customers. This is done by creating the daily cash flow as a time series and finding the discount rate for which the net present value (NPV) is zero. This is implemented in the internal rate of return (IRR) function provided in many software packages.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[9]:
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="n"&gt;lanterns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;d10g&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;price&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;0.0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;daily&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;40.&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;deposit&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2500&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+            &lt;span class="s"&gt;&amp;#39;d20g&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;price&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;17540&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;daily&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;50.&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;deposit&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2999&lt;/span&gt;&lt;span class="p"&gt;}}&lt;/span&gt;
+
+&lt;span class="c"&gt;# calculate APR as range&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h1 id="initial-payment"&gt;Initial payment&lt;/h1&gt;
+&lt;p&gt;This is the difference between the assumed retail value and the deposit provided by the customer. This difference represents the balance that is being financed by M-KOPA.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[10]:
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;lantern&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;d20g&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;initial_payment&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;lanterns&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;lantern&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;price&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;lanterns&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;lantern&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;deposit&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Initial payment = {} KSH&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;initial_payment&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;
+Initial payment = 14541 KSH
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h1 id="payment-time-series"&gt;Payment time series&lt;/h1&gt;
+&lt;p&gt;I construct an array of one initial finance benefit followed by 365 daily payments.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[11]:
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# create a payment stream and calculate effective interest rate&lt;/span&gt;
+&lt;span class="n"&gt;payments&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;lanterns&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;lantern&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;daily&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ones&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;366&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# initial price&lt;/span&gt;
+&lt;span class="n"&gt;payments&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;lanterns&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;lantern&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;price&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;lanterns&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;lantern&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;deposit&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="interest-rate-calculation"&gt;Interest rate calculation&lt;/h2&gt;
+&lt;p&gt;I can calculate the effective daily interest rate by passing this time series to a function that calculates the internal rate of return (IRR).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[12]:
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;daily_interest_rate&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;irr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;payments&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;daily interest rate {:.4f}&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;daily_interest_rate&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;
+daily interest rate 0.0013
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h1 id="daily-vs-yearly-apr"&gt;Daily vs Yearly APR&lt;/h1&gt;
+&lt;p&gt;The IRR function will return the daily interest rate. To get the effective annual interest rate, I multiply by 365.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[13]:
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# get APR from daily rate&lt;/span&gt;
+&lt;span class="n"&gt;interest_rate&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;daily_interest_rate&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;365&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Yearly APR: {:.2f}&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;interest_rate&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;
+Yearly APR: 0.47
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;This interest rate is higher than that offered by microfinance institutions reflecting the high costs to maintain the loan and collect payments.&lt;/p&gt;
+&lt;p&gt;Financing arrangements or insurance products that increase the loan terms will lower the monthly payments to consumers, allowing more to participate in the market.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[13]:
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;Creative Commons Attribution 3.0 Unported License&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Markdown and Pandoc for writing</title><link href="http://dsoto.github.io/blog/2014/06/12/markdown-and-pandoc-for-writing/" rel="alternate"></link><updated>2014-06-12T10:00:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2014-06-12:blog/2014/06/12/markdown-and-pandoc-for-writing/</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;I've been using Markdown, a plain text lightweight markup language in
 combination with Pandoc, a versatile document converter to do the bulk
 of my writing.&lt;/p&gt;
@@ -62,12 +328,24 @@ see what I've already covered.&lt;/p&gt;
 retrieve old figures from inside previous presentations.  Having all
 figures exposed as files makes reuse quicker for me.&lt;/p&gt;</summary></entry><entry><title>LabJack U12 Data Acquisition Device and IPython Notebook</title><link href="http://dsoto.github.io/blog/2013/11/11/labjack-u12-data-acquisition-device-and-ipython-notebook/" rel="alternate"></link><updated>2013-11-11T12:40:00-08:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2013-11-11:blog/2013/11/11/labjack-u12-data-acquisition-device-and-ipython-notebook/</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;This notebook has a simple implementation of a current and voltage meter using a LabJack U12 data acquisition device being run within an ipython notebook. This device has multiplatform drivers and was unreasonably easy to set up on my OS X laptop. I used a single click installer from the LabJack website and then downloaded and installed the python library from github.&lt;/p&gt;
+&lt;p&gt;I have some new Lithium Iron Phosphate batteries that I wanted to test so I placed a shunt between my battery charger and the battery pack to simultaneously measure the voltage and current delivered to the battery.&lt;/p&gt;
+&lt;p&gt;The LabJack platform is appealing since I can create very simple and accessible data acquisition on any platform for the classes I teach. Being able to do a simple acquisition in ~20 lines of code with a ~100 USD device is great.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[1]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;u12&lt;/span&gt;          &lt;span class="c"&gt;# this is the labjack device library&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt;
@@ -75,44 +353,56 @@ In&amp;nbsp;[1]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[2]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;u12&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;U12&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;       &lt;span class="c"&gt;# initializes device&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[3]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# sets up an output data file&lt;/span&gt;
 &lt;span class="n"&gt;fout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;labjack.txt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;wa&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;This defines two convenience functions to encapsulate the details of reading the shunt resistor and battery voltage.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[4]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# channel = 0 sets to single-ended input for AI0&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;readVoltage&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eAnalogIn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;channel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;voltage&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -125,17 +415,25 @@ In&amp;nbsp;[4]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Executes a loop to read current and voltage, take timestamp and write to file.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[5]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# get initial timestamp&lt;/span&gt;
 &lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -152,13 +450,14 @@ In&amp;nbsp;[5]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
 
 
 &lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_pyerr"&gt;
+&lt;div class="output_subarea output_text output_pyerr"&gt;
 &lt;pre&gt;
 &lt;span class="ansired"&gt;---------------------------------------------------------------------------&lt;/span&gt;
 &lt;span class="ansired"&gt;KeyboardInterrupt&lt;/span&gt;                         Traceback (most recent call last)
@@ -175,18 +474,26 @@ In&amp;nbsp;[5]:
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;This is the output in the file. Note that there is about 30 msec of overhead in the loop. There are ways to do synchronous capture, but most of my energy applications don't need that level of timebase precision.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[6]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;!&lt;/span&gt;tail labjack.txt
 &lt;/pre&gt;&lt;/div&gt;
 
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -195,7 +502,7 @@ In&amp;nbsp;[6]:
 
 
 &lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;
 18.564275,4.5947265625,-0.044921875
 19.595143,4.5947265625,-0.04443359375
@@ -218,12 +525,31 @@ In&amp;nbsp;[6]:
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;Creative Commons Attribution 3.0 Unported License&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Refrigeration lifecycle costs and insulation thickness</title><link href="http://dsoto.github.io/blog/2013/10/18/refrigeration-lifecycle-costs-and-insulation-thickness/" rel="alternate"></link><updated>2013-10-18T12:30:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2013-10-18:blog/2013/10/18/refrigeration-lifecycle-costs-and-insulation-thickness/</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;These calculations estimate the optimal thickness of insulation for a simplified refrigerator model. The life-cycle cost considers both the first cost of purchasing insulation and the operational cost of buying electricity to power the refrigerator. We assume that the other costs (exterior, compressor, etc.) are fixed with the insulation thickness and therefore do not affect the optimum thickness.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\[ 
+\textrm{Life Cycle Cost} 
+= \textrm{Captial Cost} + \textrm{Operational Cost}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\[ \textrm{Captial Cost (USD/year)} = \textrm{Initial Cost (USD)} \cdot \textrm{Cost of Capital (1/year)} \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\[ \textrm{Operational Cost (USD/year)} = 
+\textrm{Energy Use (kWh/year)} \cdot \textrm{Electricity Cost (USD/kWh)} \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The initial cost is based on the volume of insulation and the operational cost is based on the resulting energy use. As the volume of insulation increases, the capital cost rises and the operational cost decreases.&lt;/p&gt;
+&lt;p&gt;Below are the assumptions in the calculation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[1]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;capture&lt;/span&gt;
 &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;pylab&lt;/span&gt; &lt;span class="n"&gt;inline&lt;/span&gt;
 
@@ -249,8 +575,13 @@ In&amp;nbsp;[1]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Here I calculate the life cycle cost based on the assumptions above. For simplicity, I assume a spherical cabinet where the thermal resistance is given by&lt;/p&gt;
 &lt;p&gt;&lt;span class="math"&gt;\[ R_{sphere} = \frac{1}{4\pi k} [ \frac{1}{r_1} - \frac{1}{r_2} ] \]&lt;/span&gt;&lt;/p&gt;
@@ -258,12 +589,15 @@ In&amp;nbsp;[1]:
 &lt;p&gt;&lt;span class="math"&gt;\[V_{insulation} = \frac{4 \pi}{3} (r_2^3 - r_1^3)\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;There are several other assumptions for insulation cost, cost of capital, and heat pump efficiency.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[2]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_life_cycle_cost&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     
     &lt;span class="c"&gt;# computes the thermal resistance and conductance&lt;/span&gt;
@@ -284,17 +618,25 @@ In&amp;nbsp;[2]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="insulation-thickness-for-inexpensive-electricity"&gt;Insulation thickness for inexpensive electricity&lt;/h2&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[3]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;energy_cost&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.15&lt;/span&gt;
 &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;get_life_cycle_cost&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 &lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Insulation Thickness (m)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -305,15 +647,16 @@ In&amp;nbsp;[3]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
 
 
 &lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
 
 
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYYAAAEXCAYAAACpuuMDAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xl8TOf+B/DPJKIhq4QMGjKKWCKbxF6Mq1RaS6hGLUlQ
 ylV7W+UqopuoXdt7dUFSxa+2Kilp3RC1ViUpLiUliy2JRmQTWef5/XFu5mYwWcya+Lxfr3nJLOc8
@@ -562,27 +905,41 @@ BAQEYNOmTY99vwCgQ4cO+PDDDzFw4ECoVCpYWVnhn//8J6ytrTFhwgR1LSs8PBxlZWUIDg5GTk4O
 hBCYNWsW7O3tNfbn7e2NK1euVHosj3uupKQEN2/eRPv27av1nlHdwUX0iJ4C48ePx9///vcaXQnt
 559/xo8//qge/URPDzYlET0F3n77bWzYsKFG23z99deYM2eOgSIic8YaAxERaWCNgYiINDAxEBGR
 BiYGIiLSwMRAREQamBiIiEgDEwMREWn4f7noYXt0rH9ZAAAAAElFTkSuQmCC
-"&gt;
+"
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;This is surprisingly close the the thickness you can observe in a commercially available refrigerator. Keep in mind that it is sensitive to the cost of electricity and the efficiency of the heat pump.&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="insulation-thickness-for-expensive-electricity"&gt;Insulation thickness for expensive electricity&lt;/h1&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[4]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;energy_cost&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;
 &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;get_life_cycle_cost&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 &lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Insulation Thickness (m)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -593,15 +950,16 @@ In&amp;nbsp;[4]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
 
 
 &lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
 
 
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYwAAAEXCAYAAAC+mHPKAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XlcVPX+x/HXsBgugCIyqCiYigqyCa6F4jW3yiUzSssF
 tVvX1Mpulm1ii6KmqfUr781cs9KyTM2oey0sU3PBrKuVmiCggKGCICLb9/fHidERkAGGmQE+z8fj
@@ -870,57 +1228,103 @@ RRm2ymJiYigqKmLcuHFkZWWhlOLxxx/HxcXFaHlBQUH8/vvvN30tZT1WUFBASkoKnTt3Nuk9E3WH
 DD4oRD02ceJE/vGPf1TqynVff/01X3zxheFoLFF/yC4pIeqxf/7zn6xYsaJS86xcuZInn3yyhhIJ
 WyZbGEIIIUwiWxhCCCFMIgVDCCGESaRgCCGEMIkUDCGEECaRgiGEEMIkUjCEEEKY5P8BxYXKyDf0
 kw8AAAAASUVORK5CYII=
-"&gt;
+"
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;We notice that at higher electricity cost, the yearly cost increases and we must have a better insulated cabinet. Keep in mind that the yearly cost does not include the other refrigeration components so it is an underestimation.&lt;/p&gt;
 &lt;p&gt;Insulation is usually the most cost-effective approach to lowering life-cycle costs for refrigeration. However, since traditional blown polyurethane insulation is relatively expensive, higher electricity costs mean the yearly cost of refrigeration is expensive even for efficient refrigerators. At some point, the high cost of electricity in many rural markets will make the cost of refrigeration services to expensive for the local customers.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[4]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;Creative Commons Attribution 3.0 Unported License&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Refrigeration cost of conserved energy</title><link href="http://dsoto.github.io/blog/2013/10/10/refrigeration-cost-of-conserved-energy/" rel="alternate"></link><updated>2013-10-10T11:40:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2013-10-10:blog/2013/10/10/refrigeration-cost-of-conserved-energy/</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Typical refrigerators in rural environments with photovoltaic electricity tend to strain the inverters. There are some very energy efficient refrigerator models as well but the cost for these units is much higher.&lt;/p&gt;
+&lt;p&gt;We compare between two representative refrigerators.&lt;/p&gt;
+&lt;p&gt;A typical refrigerator is the Haier, which is basically what we in the states might call a &amp;quot;dorm room refrigerator&amp;quot;.&lt;/p&gt;
+&lt;h3 id="haier"&gt;Haier&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;$129 purchase cost&lt;/li&gt;
+&lt;li&gt;71 L capacity&lt;/li&gt;
+&lt;li&gt;821 wh per day&lt;/li&gt;
+&lt;li&gt;HNSEW025&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Sundanzer is a well-insulated refrigerator with an improved compressor allowing for much better energy performance.&lt;/p&gt;
+&lt;h3 id="sundanzer"&gt;Sundanzer&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;$700 initial cost&lt;/li&gt;
+&lt;li&gt;50 L capacity&lt;/li&gt;
+&lt;li&gt;freezer 280 wh per day at 32C&lt;/li&gt;
+&lt;li&gt;refrigerator 114 wh per day at 32 C&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To compare these two options, I use the cost of conserved energy which is the ratio of the difference in finance cost over the difference in energy consumption. This can be interpreted as the price of avoided energy allowing a direct comparison with the current or future energy costs.&lt;/p&gt;
+&lt;p&gt;$ CCE =  $&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[1]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;capture&lt;/span&gt;
 &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;pylab&lt;/span&gt; &lt;span class="n"&gt;inline&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;We set up two data dictionaries to store the refrigerator performance parameters.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[2]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;haier&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;initial_cost&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;129.&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
          &lt;span class="s"&gt;&amp;#39;capacity_liter&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;71.&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
          &lt;span class="s"&gt;&amp;#39;energy_kWh_per_day&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;0.821&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
@@ -932,17 +1336,25 @@ In&amp;nbsp;[2]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;We calculate the annual energy savings between the two refrigerators.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[3]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;days_per_year&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;365&lt;/span&gt;
 &lt;span class="n"&gt;annual_energy_savings&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;haier&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;energy_kWh_per_day&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; 
                          &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;sundanzer&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;energy_kWh_per_day&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; 
@@ -952,13 +1364,14 @@ In&amp;nbsp;[3]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
 
 
 &lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;
 258.055 kWh saved per year
 
@@ -970,19 +1383,27 @@ In&amp;nbsp;[3]:
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;The initial cost difference between the two refrigerators is&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[4]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;cost_difference&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sundanzer&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;initial_cost&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;haier&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;initial_cost&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;difference in initial purchase cost&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cost_difference&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;USD&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -991,7 +1412,7 @@ In&amp;nbsp;[4]:
 
 
 &lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;
 difference in initial purchase cost 571.0 USD
 
@@ -1003,6 +1424,10 @@ difference in initial purchase cost 571.0 USD
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;We can see that the cost of conserved or avoided energy is over 2 USD per kWh&lt;/p&gt;
 &lt;p&gt;&lt;span class="math"&gt;\[ CCE = \frac{\textrm{initial cost difference}}{\textrm{annual energy savings}} =
@@ -1010,6 +1435,12 @@ difference in initial purchase cost 571.0 USD
 = 2.21 \textrm{USD/kWh}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Since photovoltaic electricity, even with expensive battery backup, has levelized costs at or below 0.50 USD/kWh, this is not a cost effective investment if paid for upfront.&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="impact-of-financing"&gt;Impact of financing&lt;/h2&gt;
 &lt;p&gt;We can also calculate this over a range of financing options and visualize the result. We add the cost of capital and the discounted energy costs over a longer time period in this calculation.&lt;/p&gt;
@@ -1019,12 +1450,15 @@ difference in initial purchase cost 571.0 USD
 &lt;h2 id="contour-plotting-of-cost-of-conserved-energy"&gt;Contour plotting of cost of conserved energy&lt;/h2&gt;
 &lt;p&gt;Below I set up a contour plot with the interest rate on the vertical axis and the finance period in years on the horizontal axis.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[5]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;CCE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rate&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num_periods&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;sundanzer&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;initial_cost&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;haier&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;initial_cost&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; 
             &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;annual_energy_savings&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; 
@@ -1047,15 +1481,16 @@ In&amp;nbsp;[5]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
 
 
 &lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
 
 
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYgAAAEXCAYAAAC3c9OwAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsnXdUVNf39h+aSFeKKM0GCojYsIANsTeMXQmKYmIJxm7s
 sdcYo9HEXmNNjHklCliDElE0IqhgA6VLESlSh5nZ7x/+mC9DHXRmzgXuZy3WYm47z71z5+67z95n
@@ -1509,27 +1944,45 @@ mpqvfe+997Bs2TIolUqYTCbL523N5e/WrRt27NiByZMnIzIy0jJB9ZfXW/s4Li4O/v7+kMvlmDlz
 JpRKpcNtpeOIA17myuFIEJ1OBzc3N1RWVkKlUuHSpUstmv/P4dwPT1JzOBLk1VdfRXV1NfR6PT78
 8ENuHDitgnsQHA6Hw7EKz0FwOBwOxyrcQHA4HA7HKtxAcDgcDscq3EBwOBwOxyrcQHA4HA7HKtxA
 cDgcDscq/we8r/3kfQGjhgAAAABJRU5ErkJggg==
-"&gt;
+"
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;We can see that the cost of conserved energy is above the 0.50 USD/kWh unless we have loan times of several years at very attractive rates. It is hard to believe that financing this attractive could be available in these rural markets.&lt;/p&gt;
 &lt;p&gt;These efficient refrigerators are not designed for cost-constrained markets. It seems plausible that an attractive market exists in these areas for a product with a reduced initial cost and improved efficiency.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;Creative Commons Attribution 3.0 Unported License&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Energy cost of beverage cooling</title><link href="http://dsoto.github.io/blog/2013/10/10/energy-cost-of-beverage-cooling/" rel="alternate"></link><updated>2013-10-10T09:50:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2013-10-10:blog/2013/10/10/energy-cost-of-beverage-cooling/</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Here I calculate the energy needed to cool a beverage. I also estimate the cost of this energy.&lt;/p&gt;
+&lt;p&gt;I start by calculating the sensible heat that must be extracted from a can or bottle.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[7]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;volume_l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.5&lt;/span&gt;
 &lt;span class="n"&gt;temperature_difference_K&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;25.0&lt;/span&gt;
 &lt;span class="n"&gt;density_water_g_per_l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1000.&lt;/span&gt;
@@ -1549,13 +2002,14 @@ In&amp;nbsp;[7]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
 
 
 &lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;
 sensible heat (joules) = 52318.75
 sensible heat (kWh) = 0.015
@@ -1568,6 +2022,10 @@ sensible heat (kWh) = 0.015
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;The energy we must supply is less than this because typical refrigerators can remove more units of heat energy than the units of electrical energy delivered. Even with very expensive electricity ($1/kWh) this would add less than 0.01 USD to the cost of the drink.&lt;/p&gt;
 &lt;p&gt;This is the cost to cool down the drink. We can also estimate the cost to keep the drink stored at a cool temperature.&lt;/p&gt;
@@ -1575,12 +2033,15 @@ sensible heat (kWh) = 0.015
 &lt;p&gt;Each beverage has an average residence time in the refrigerator. We can estimate the energy use per can for storage by&lt;/p&gt;
 &lt;p&gt;&lt;span class="math"&gt;\[ \frac{\textrm{energy used per unit time}}{\textrm{cans sold per unit time}} \]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[13]:
 &lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# haier refrigerator consumes 0.8 kWh per day&lt;/span&gt;
 
 &lt;span class="n"&gt;energy_per_day_kWh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.8&lt;/span&gt;
@@ -1593,13 +2054,14 @@ In&amp;nbsp;[13]:
 
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
 
 
 &lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;
 storage kWh per can 0.08
 
@@ -1611,8 +2073,14 @@ storage kWh per can 0.08
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Depending on the number of cans sold per day, the energy used by the refrigerator to keep the beverage cool more than the energy necessary to cool the beverage to drinking temperature.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;Creative Commons Attribution 3.0 Unported License&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>First post with Pelican</title><link href="http://dsoto.github.io/blog/2013/10/10/first-post-with-pelican/" rel="alternate"></link><updated>2013-10-10T09:35:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2013-10-10:blog/2013/10/10/first-post-with-pelican/</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;I am trying out pelican as an authoring tool.&lt;/p&gt;

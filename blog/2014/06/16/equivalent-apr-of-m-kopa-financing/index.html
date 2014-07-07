@@ -4,7 +4,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Markdown and Pandoc for writing</title>
+  <title>Equivalent APR of M-KOPA Financing</title>
   <meta name="author" content="Daniel Soto">
 
 
@@ -1755,56 +1755,255 @@ jQuery(document).ready(function($) {
 <div>
   <article class="hentry" role="article">
 <header>
-      <h1 class="entry-title">Markdown and Pandoc for writing</h1>
-      <p class="meta"><time datetime="2014-06-12T10:00:00" pubdate>Thu 12 June 2014</time></p>
+      <h1 class="entry-title">Equivalent APR of M-KOPA Financing</h1>
+      <p class="meta"><time datetime="2014-06-16T12:00:00" pubdate>Mon 16 June 2014</time></p>
 </header>
 
   <div class="entry-content"><hr />
-<p>I've been using Markdown, a plain text lightweight markup language in
-combination with Pandoc, a versatile document converter to do the bulk
-of my writing.</p>
-<p>The benefits</p>
-<ul>
-<li>I can use the same text editing tools for my computing work as well as
-  my writing work.</li>
-<li>With a generic makefile, I can compile the markdown file into PDF,
-  HTML and DOCX with a single command.  This allows me to use the tools
-  I am most comfortable with and send drafts to colleagues in whichever
-  format they are most comfortable with.</li>
-<li>I can post the markdown file to my Github account and it is visible as
-  a rendered document instead of the plaintext.  This allows me to
-  quickly update documents and make them available publicly with very
-  little effort.  I can update the document and push it to Github and it
-  is immediately visible.</li>
-</ul>
-<p>This works very well for teaching documents and other short pieces.  It
-doesn't have all the features I need for writing conference and journal
-papers.  I tried valiantly to use Markdown and Pandoc for a recent
-conference submission but had two main problems.</p>
-<ul>
-<li>It is not straightforward to use references and labels using Markdown.
-  This is important when you need to refer to figures and tables.</li>
-<li>Two column formatting and tables.  My conference template is in a two
-  column format and I wasn't able to include a table in the two column
-  mode.</li>
-</ul>
-<p>The lightweight syntax and features of Markdown excel when there will be
-no page formatting or page breaks.  I had to fall back to LaTeX for the
-submission.</p>
-<p>I was able to create a multi-output workflow by placing the content of
-the paper in a single LaTeX file and then using \input to read the
-content into three different files with different preambles.  One in the
-journal proprietary final format, one in a standard format for
-self-publication, and one in a draft format for comments and co-authors.</p>
-<p>The markdown and pandoc tools take some time to set up, but being able
-to write in plain text with very light markup in a powerful text
-editor is a joy.</p></div>
+<p>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Many customers are unable to purchase solar home systems for lighting and phone charging without a financing option. For a customer to compare between the rate available from a microfinance lender and a company that provides in-house finance, they must compare the effective interest rates. M-KOPA advertises their deposit and daily payments online and the effective APR can be calculated from this.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">device</th>
+<th align="left">initial cost</th>
+<th align="left">deposit</th>
+<th align="left">daily payment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">d10g</td>
+<td align="left">?</td>
+<td align="left">2500 KSH</td>
+<td align="left">40 KSH</td>
+</tr>
+<tr class="even">
+<td align="left">d20g</td>
+<td align="left">17540 KSH</td>
+<td align="left">2999 KSH</td>
+<td align="left">50 KSH</td>
+</tr>
+</tbody>
+</table>
+<p>The retail cost for the d.light d20g system is listed on Amazon as 199 USD. At an exchange rate of 87.7 KSH to 1 USD, the initial cost is 17540 KSH. I'm not aware of a published retail price for the d10g product.</p>
+<p>From the daily payment, the loan length, and the initial cost I can calculate the equivalent daily interest rate for the loan that M-KOPA provides to their customers. This is done by creating the daily cash flow as a time series and finding the discount rate for which the net present value (NPV) is zero. This is implemented in the internal rate of return (IRR) function provided in many software packages.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">lanterns</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;d10g&#39;</span><span class="p">:{</span><span class="s">&#39;price&#39;</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span> <span class="s">&#39;daily&#39;</span><span class="p">:</span><span class="mf">40.</span><span class="p">,</span> <span class="s">&#39;deposit&#39;</span><span class="p">:</span><span class="mi">2500</span><span class="p">},</span>
+            <span class="s">&#39;d20g&#39;</span><span class="p">:{</span><span class="s">&#39;price&#39;</span><span class="p">:</span><span class="mi">17540</span><span class="p">,</span> <span class="s">&#39;daily&#39;</span><span class="p">:</span><span class="mf">50.</span><span class="p">,</span> <span class="s">&#39;deposit&#39;</span><span class="p">:</span><span class="mi">2999</span><span class="p">}}</span>
+
+<span class="c"># calculate APR as range</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="initial-payment">Initial payment</h1>
+<p>This is the difference between the assumed retail value and the deposit provided by the customer. This difference represents the balance that is being financed by M-KOPA.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="n">lantern</span> <span class="o">=</span> <span class="s">&#39;d20g&#39;</span>
+<span class="n">initial_payment</span> <span class="o">=</span> <span class="n">lanterns</span><span class="p">[</span><span class="n">lantern</span><span class="p">][</span><span class="s">&#39;price&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">lanterns</span><span class="p">[</span><span class="n">lantern</span><span class="p">][</span><span class="s">&#39;deposit&#39;</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;Initial payment = {} KSH&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">initial_payment</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Initial payment = 14541 KSH
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="payment-time-series">Payment time series</h1>
+<p>I construct an array of one initial finance benefit followed by 365 daily payments.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="c"># create a payment stream and calculate effective interest rate</span>
+<span class="n">payments</span> <span class="o">=</span> <span class="o">-</span><span class="n">lanterns</span><span class="p">[</span><span class="n">lantern</span><span class="p">][</span><span class="s">&#39;daily&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">366</span><span class="p">)</span>
+
+<span class="c"># initial price</span>
+<span class="n">payments</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">lanterns</span><span class="p">[</span><span class="n">lantern</span><span class="p">][</span><span class="s">&#39;price&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">lanterns</span><span class="p">[</span><span class="n">lantern</span><span class="p">][</span><span class="s">&#39;deposit&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="interest-rate-calculation">Interest rate calculation</h2>
+<p>I can calculate the effective daily interest rate by passing this time series to a function that calculates the internal rate of return (IRR).</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[12]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="n">daily_interest_rate</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">irr</span><span class="p">(</span><span class="n">payments</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;daily interest rate {:.4f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">daily_interest_rate</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+daily interest rate 0.0013
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="daily-vs-yearly-apr">Daily vs Yearly APR</h1>
+<p>The IRR function will return the daily interest rate. To get the effective annual interest rate, I multiply by 365.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="c"># get APR from daily rate</span>
+<span class="n">interest_rate</span> <span class="o">=</span> <span class="n">daily_interest_rate</span> <span class="o">*</span> <span class="mi">365</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;Yearly APR: {:.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">interest_rate</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Yearly APR: 0.47
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This interest rate is higher than that offered by microfinance institutions reflecting the high costs to maintain the loan and collect payments.</p>
+<p>Financing arrangements or insurance products that increase the loan terms will lower the monthly payments to consumers, allowing more to participate in the market.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb">
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p></div>
     <footer>
 <p class="meta">
   <span class="byline author vcard">
     Posted by <span class="fn">Daniel Soto</span>
   </span>
-<time datetime="2014-06-12T10:00:00" pubdate>Thu 12 June 2014</time></p>    </footer>
+<time datetime="2014-06-16T12:00:00" pubdate>Mon 16 June 2014</time></p>    </footer>
   </article>
 
 </div>
