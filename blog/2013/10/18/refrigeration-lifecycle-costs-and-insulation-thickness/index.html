@@ -1766,15 +1766,15 @@ jQuery(document).ready(function($) {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>These calculations estimate the optimal thickness of insulation for a simplified refrigerator model. The life-cycle cost considers both the first cost of purchasing insulation and the operational cost of buying electricity to power the refrigerator. We assume that the other costs (exterior, compressor, etc.) are fixed with the insulation thickness and therefore do not affect the optimum thickness.</p>
-<p><span class="math">\[ 
+<p>These calculations estimate the optimal thickness of insulation for a simplified refrigerator model.  The life-cycle cost considers both the first cost of purchasing insulation and the operational cost of buying electricity to power the refrigerator.  We assume that the other costs (exterior, compressor, etc.) are fixed with the insulation thickness and therefore do not affect the optimum thickness.</p>
+<p>$$ 
 \textrm{Life Cycle Cost} 
 = \textrm{Captial Cost} + \textrm{Operational Cost}
-\]</span></p>
-<p><span class="math">\[ \textrm{Captial Cost (USD/year)} = \textrm{Initial Cost (USD)} \cdot \textrm{Cost of Capital (1/year)} \]</span></p>
-<p><span class="math">\[ \textrm{Operational Cost (USD/year)} = 
-\textrm{Energy Use (kWh/year)} \cdot \textrm{Electricity Cost (USD/kWh)} \]</span></p>
-<p>The initial cost is based on the volume of insulation and the operational cost is based on the resulting energy use. As the volume of insulation increases, the capital cost rises and the operational cost decreases.</p>
+$$</p>
+<p>$$ \textrm{Captial Cost (USD/year)} = \textrm{Initial Cost (USD)} \cdot \textrm{Cost of Capital (1/year)} $$</p>
+<p>$$ \textrm{Operational Cost (USD/year)} = 
+\textrm{Energy Use (kWh/year)} \cdot \textrm{Electricity Cost (USD/kWh)} $$</p>
+<p>The initial cost is based on the volume of insulation and the operational cost is based on the resulting energy use.  As the volume of insulation increases, the capital cost rises and the operational cost decreases.</p>
 <p>Below are the assumptions in the calculation.</p>
 </div>
 </div>
@@ -1819,10 +1819,10 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here I calculate the life cycle cost based on the assumptions above. For simplicity, I assume a spherical cabinet where the thermal resistance is given by</p>
-<p><span class="math">\[ R_{sphere} = \frac{1}{4\pi k} [ \frac{1}{r_1} - \frac{1}{r_2} ] \]</span></p>
+<p>Here I calculate the life cycle cost based on the assumptions above.  For simplicity, I assume a spherical cabinet  where the thermal resistance is given by</p>
+<p>$$ R_{sphere} = \frac{1}{4\pi k} [ \frac{1}{r_1} - \frac{1}{r_2} ] $$</p>
 <p>and the volume of insulation is given by</p>
-<p><span class="math">\[V_{insulation} = \frac{4 \pi}{3} (r_2^3 - r_1^3)\]</span></p>
+<p>$$V_{insulation} = \frac{4 \pi}{3} (r_2^3 - r_1^3)$$</p>
 <p>There are several other assumptions for insulation cost, cost of capital, and heat pump efficiency.</p>
 </div>
 </div>
@@ -2156,7 +2156,7 @@ BiYGIiLSwMRAREQamBiIiEgDEwMREWn4f7noYXt0rH9ZAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is surprisingly close the the thickness you can observe in a commercially available refrigerator. Keep in mind that it is sensitive to the cost of electricity and the efficiency of the heat pump.</p>
+<p>This is surprisingly close the the thickness you can observe in a commercially available refrigerator.  Keep in mind that it is sensitive to the cost of electricity and the efficiency of the heat pump.</p>
 </div>
 </div>
 </div>
@@ -2479,8 +2479,8 @@ kw8AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We notice that at higher electricity cost, the yearly cost increases and we must have a better insulated cabinet. Keep in mind that the yearly cost does not include the other refrigeration components so it is an underestimation.</p>
-<p>Insulation is usually the most cost-effective approach to lowering life-cycle costs for refrigeration. However, since traditional blown polyurethane insulation is relatively expensive, higher electricity costs mean the yearly cost of refrigeration is expensive even for efficient refrigerators. At some point, the high cost of electricity in many rural markets will make the cost of refrigeration services to expensive for the local customers.</p>
+<p>We notice that at higher electricity cost, the yearly cost increases and we must have a better insulated cabinet.  Keep in mind that the yearly cost does not include the other refrigeration components so it is an underestimation. </p>
+<p>Insulation is usually the most cost-effective approach to lowering life-cycle costs for refrigeration.  However, since traditional blown polyurethane insulation is relatively expensive, higher electricity costs mean the yearly cost of refrigeration is expensive even for efficient refrigerators.  At some point, the high cost of electricity in many rural markets will make the cost of refrigeration services to expensive for the local customers.</p>
 </div>
 </div>
 </div>

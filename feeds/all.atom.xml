@@ -112,33 +112,33 @@ to try them in the classroom.&lt;/p&gt;</summary></entry><entry><title>Equivalen
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Many customers are unable to purchase solar home systems for lighting and phone charging without a financing option. For a customer to compare between the rate available from a microfinance lender and a company that provides in-house finance, they must compare the effective interest rates. M-KOPA advertises their deposit and daily payments online and the effective APR can be calculated from this.&lt;/p&gt;
+&lt;p&gt;Many customers are unable to purchase solar home systems for lighting and phone charging without a financing option.  For a customer to compare between the rate available from a microfinance lender and a company that provides in-house finance, they must compare the effective interest rates.  M-KOPA advertises their deposit and daily payments online and the effective APR can be calculated from this.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
-&lt;tr class="header"&gt;
-&lt;th align="left"&gt;device&lt;/th&gt;
-&lt;th align="left"&gt;initial cost&lt;/th&gt;
-&lt;th align="left"&gt;deposit&lt;/th&gt;
-&lt;th align="left"&gt;daily payment&lt;/th&gt;
+&lt;tr&gt;
+&lt;th&gt;device&lt;/th&gt;
+&lt;th&gt;initial cost&lt;/th&gt;
+&lt;th&gt;deposit&lt;/th&gt;
+&lt;th&gt;daily payment&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class="odd"&gt;
-&lt;td align="left"&gt;d10g&lt;/td&gt;
-&lt;td align="left"&gt;?&lt;/td&gt;
-&lt;td align="left"&gt;2500 KSH&lt;/td&gt;
-&lt;td align="left"&gt;40 KSH&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;d10g&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;2500 KSH&lt;/td&gt;
+&lt;td&gt;40 KSH&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class="even"&gt;
-&lt;td align="left"&gt;d20g&lt;/td&gt;
-&lt;td align="left"&gt;17540 KSH&lt;/td&gt;
-&lt;td align="left"&gt;2999 KSH&lt;/td&gt;
-&lt;td align="left"&gt;50 KSH&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;d20g&lt;/td&gt;
+&lt;td&gt;17540 KSH&lt;/td&gt;
+&lt;td&gt;2999 KSH&lt;/td&gt;
+&lt;td&gt;50 KSH&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;The retail cost for the d.light d20g system is listed on Amazon as 199 USD. At an exchange rate of 87.7 KSH to 1 USD, the initial cost is 17540 KSH. I'm not aware of a published retail price for the d10g product.&lt;/p&gt;
-&lt;p&gt;From the daily payment, the loan length, and the initial cost I can calculate the equivalent daily interest rate for the loan that M-KOPA provides to their customers. This is done by creating the daily cash flow as a time series and finding the discount rate for which the net present value (NPV) is zero. This is implemented in the internal rate of return (IRR) function provided in many software packages.&lt;/p&gt;
+&lt;p&gt;The retail cost for the d.light d20g system is listed on Amazon as 199 USD.  At an exchange rate of 87.7 KSH to 1 USD, the initial cost is 17540 KSH.  I&amp;#39;m not aware of a published retail price for the d10g product.  &lt;/p&gt;
+&lt;p&gt;From the daily payment, the loan length, and the initial cost I can calculate the equivalent daily interest rate for the loan that M-KOPA provides to their customers.  This is done by creating the daily cash flow as a time series and finding the discount rate for which the net present value (NPV) is zero.  This is implemented in the internal rate of return (IRR) function provided in many software packages.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -167,7 +167,7 @@ In&amp;nbsp;[9]:
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="initial-payment"&gt;Initial payment&lt;/h1&gt;
-&lt;p&gt;This is the difference between the assumed retail value and the deposit provided by the customer. This difference represents the balance that is being financed by M-KOPA.&lt;/p&gt;
+&lt;p&gt;This is the difference between the assumed retail value and the deposit provided by the customer.  This difference represents the balance that is being financed by M-KOPA.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -281,7 +281,7 @@ daily interest rate 0.0013
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="daily-vs-yearly-apr"&gt;Daily vs Yearly APR&lt;/h1&gt;
-&lt;p&gt;The IRR function will return the daily interest rate. To get the effective annual interest rate, I multiply by 365.&lt;/p&gt;
+&lt;p&gt;The IRR function will return the daily interest rate.  To get the effective annual interest rate, I multiply by 365.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -323,7 +323,7 @@ Yearly APR: 0.47
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;This interest rate is higher than that offered by microfinance institutions reflecting the high costs to maintain the loan and collect payments.&lt;/p&gt;
+&lt;p&gt;This interest rate is higher than that offered by microfinance institutions reflecting the high costs to maintain the loan and collect payments.  &lt;/p&gt;
 &lt;p&gt;Financing arrangements or insurance products that increase the loan terms will lower the monthly payments to consumers, allowing more to participate in the market.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -411,9 +411,9 @@ figures exposed as files makes reuse quicker for me.&lt;/p&gt;</summary></entry>
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;This notebook has a simple implementation of a current and voltage meter using a LabJack U12 data acquisition device being run within an ipython notebook. This device has multiplatform drivers and was unreasonably easy to set up on my OS X laptop. I used a single click installer from the LabJack website and then downloaded and installed the python library from github.&lt;/p&gt;
+&lt;p&gt;This notebook has a simple implementation of a current and voltage meter using a LabJack U12 data acquisition device being run within an ipython notebook.  This device has multiplatform drivers and was unreasonably easy to set up on my OS X laptop.  I used a single click installer from the LabJack website and then downloaded and installed the python library from github.    &lt;/p&gt;
 &lt;p&gt;I have some new Lithium Iron Phosphate batteries that I wanted to test so I placed a shunt between my battery charger and the battery pack to simultaneously measure the voltage and current delivered to the battery.&lt;/p&gt;
-&lt;p&gt;The LabJack platform is appealing since I can create very simple and accessible data acquisition on any platform for the classes I teach. Being able to do a simple acquisition in ~20 lines of code with a ~100 USD device is great.&lt;/p&gt;
+&lt;p&gt;The LabJack platform is appealing since I can create very simple and accessible data acquisition on any platform for the classes I teach.  Being able to do a simple acquisition in ~20 lines of code with a ~100 USD device is great.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -557,7 +557,7 @@ In&amp;nbsp;[5]:
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;This is the output in the file. Note that there is about 30 msec of overhead in the loop. There are ways to do synchronous capture, but most of my energy applications don't need that level of timebase precision.&lt;/p&gt;
+&lt;p&gt;This is the output in the file.  Note that there is about 30 msec of overhead in the loop.  There are ways to do synchronous capture, but most of my energy applications don&amp;#39;t need that level of timebase precision.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -608,15 +608,15 @@ In&amp;nbsp;[6]:
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;These calculations estimate the optimal thickness of insulation for a simplified refrigerator model. The life-cycle cost considers both the first cost of purchasing insulation and the operational cost of buying electricity to power the refrigerator. We assume that the other costs (exterior, compressor, etc.) are fixed with the insulation thickness and therefore do not affect the optimum thickness.&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\[ 
+&lt;p&gt;These calculations estimate the optimal thickness of insulation for a simplified refrigerator model.  The life-cycle cost considers both the first cost of purchasing insulation and the operational cost of buying electricity to power the refrigerator.  We assume that the other costs (exterior, compressor, etc.) are fixed with the insulation thickness and therefore do not affect the optimum thickness.&lt;/p&gt;
+&lt;p&gt;$$ 
 \textrm{Life Cycle Cost} 
 = \textrm{Captial Cost} + \textrm{Operational Cost}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\[ \textrm{Captial Cost (USD/year)} = \textrm{Initial Cost (USD)} \cdot \textrm{Cost of Capital (1/year)} \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\[ \textrm{Operational Cost (USD/year)} = 
-\textrm{Energy Use (kWh/year)} \cdot \textrm{Electricity Cost (USD/kWh)} \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The initial cost is based on the volume of insulation and the operational cost is based on the resulting energy use. As the volume of insulation increases, the capital cost rises and the operational cost decreases.&lt;/p&gt;
+$$&lt;/p&gt;
+&lt;p&gt;$$ \textrm{Captial Cost (USD/year)} = \textrm{Initial Cost (USD)} \cdot \textrm{Cost of Capital (1/year)} $$&lt;/p&gt;
+&lt;p&gt;$$ \textrm{Operational Cost (USD/year)} = 
+\textrm{Energy Use (kWh/year)} \cdot \textrm{Electricity Cost (USD/kWh)} $$&lt;/p&gt;
+&lt;p&gt;The initial cost is based on the volume of insulation and the operational cost is based on the resulting energy use.  As the volume of insulation increases, the capital cost rises and the operational cost decreases.&lt;/p&gt;
 &lt;p&gt;Below are the assumptions in the calculation.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -661,10 +661,10 @@ In&amp;nbsp;[1]:
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Here I calculate the life cycle cost based on the assumptions above. For simplicity, I assume a spherical cabinet where the thermal resistance is given by&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\[ R_{sphere} = \frac{1}{4\pi k} [ \frac{1}{r_1} - \frac{1}{r_2} ] \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Here I calculate the life cycle cost based on the assumptions above.  For simplicity, I assume a spherical cabinet  where the thermal resistance is given by&lt;/p&gt;
+&lt;p&gt;$$ R_{sphere} = \frac{1}{4\pi k} [ \frac{1}{r_1} - \frac{1}{r_2} ] $$&lt;/p&gt;
 &lt;p&gt;and the volume of insulation is given by&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\[V_{insulation} = \frac{4 \pi}{3} (r_2^3 - r_1^3)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;$$V_{insulation} = \frac{4 \pi}{3} (r_2^3 - r_1^3)$$&lt;/p&gt;
 &lt;p&gt;There are several other assumptions for insulation cost, cost of capital, and heat pump efficiency.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -998,7 +998,7 @@ BiYGIiLSwMRAREQamBiIiEgDEwMREWn4f7noYXt0rH9ZAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;This is surprisingly close the the thickness you can observe in a commercially available refrigerator. Keep in mind that it is sensitive to the cost of electricity and the efficiency of the heat pump.&lt;/p&gt;
+&lt;p&gt;This is surprisingly close the the thickness you can observe in a commercially available refrigerator.  Keep in mind that it is sensitive to the cost of electricity and the efficiency of the heat pump.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1321,8 +1321,8 @@ kw8AAAAASUVORK5CYII=
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;We notice that at higher electricity cost, the yearly cost increases and we must have a better insulated cabinet. Keep in mind that the yearly cost does not include the other refrigeration components so it is an underestimation.&lt;/p&gt;
-&lt;p&gt;Insulation is usually the most cost-effective approach to lowering life-cycle costs for refrigeration. However, since traditional blown polyurethane insulation is relatively expensive, higher electricity costs mean the yearly cost of refrigeration is expensive even for efficient refrigerators. At some point, the high cost of electricity in many rural markets will make the cost of refrigeration services to expensive for the local customers.&lt;/p&gt;
+&lt;p&gt;We notice that at higher electricity cost, the yearly cost increases and we must have a better insulated cabinet.  Keep in mind that the yearly cost does not include the other refrigeration components so it is an underestimation. &lt;/p&gt;
+&lt;p&gt;Insulation is usually the most cost-effective approach to lowering life-cycle costs for refrigeration.  However, since traditional blown polyurethane insulation is relatively expensive, higher electricity costs mean the yearly cost of refrigeration is expensive even for efficient refrigerators.  At some point, the high cost of electricity in many rural markets will make the cost of refrigeration services to expensive for the local customers.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1348,7 +1348,7 @@ In&amp;nbsp;[4]:
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Typical refrigerators in rural environments with photovoltaic electricity tend to strain the inverters. There are some very energy efficient refrigerator models as well but the cost for these units is much higher.&lt;/p&gt;
+&lt;p&gt;Typical refrigerators in rural environments with photovoltaic electricity tend to strain the inverters.  There are some very energy efficient refrigerator models as well but the cost for these units is much higher.&lt;/p&gt;
 &lt;p&gt;We compare between two representative refrigerators.&lt;/p&gt;
 &lt;p&gt;A typical refrigerator is the Haier, which is basically what we in the states might call a &amp;quot;dorm room refrigerator&amp;quot;.&lt;/p&gt;
 &lt;h3 id="haier"&gt;Haier&lt;/h3&gt;
@@ -1366,8 +1366,8 @@ In&amp;nbsp;[4]:
 &lt;li&gt;freezer 280 wh per day at 32C&lt;/li&gt;
 &lt;li&gt;refrigerator 114 wh per day at 32 C&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;To compare these two options, I use the cost of conserved energy which is the ratio of the difference in finance cost over the difference in energy consumption. This can be interpreted as the price of avoided energy allowing a direct comparison with the current or future energy costs.&lt;/p&gt;
-&lt;p&gt;$ CCE =  $&lt;/p&gt;
+&lt;p&gt;To compare these two options, I use the cost of conserved energy which is the ratio of the difference in finance cost over the difference in energy consumption.  This can be interpreted as the price of avoided energy allowing a direct comparison with the current or future energy costs.&lt;/p&gt;
+&lt;p&gt;$ CCE = \frac{\textrm{annualized investment cost}}{\textrm{annual energy savings}} $&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1466,7 +1466,7 @@ In&amp;nbsp;[3]:
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;The initial cost difference between the two refrigerators is&lt;/p&gt;
+&lt;p&gt;The initial cost difference between the two refrigerators is &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1508,10 +1508,10 @@ difference in initial purchase cost 571.0 USD
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;We can see that the cost of conserved or avoided energy is over 2 USD per kWh&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\[ CCE = \frac{\textrm{initial cost difference}}{\textrm{annual energy savings}} =
+&lt;p&gt;$$ CCE = \frac{\textrm{initial cost difference}}{\textrm{annual energy savings}} =
 \frac{571\ \textrm{USD}}{258\ \textrm{kWh}} 
-= 2.21 \textrm{USD/kWh}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Since photovoltaic electricity, even with expensive battery backup, has levelized costs at or below 0.50 USD/kWh, this is not a cost effective investment if paid for upfront.&lt;/p&gt;
+= 2.21 \textrm{USD/kWh}$$&lt;/p&gt;
+&lt;p&gt;Since photovoltaic electricity, even with expensive battery backup, has levelized costs at or below 0.50 USD/kWh, this is not a cost effective investment if paid for upfront.  &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1521,9 +1521,10 @@ difference in initial purchase cost 571.0 USD
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="impact-of-financing"&gt;Impact of financing&lt;/h2&gt;
-&lt;p&gt;We can also calculate this over a range of financing options and visualize the result. We add the cost of capital and the discounted energy costs over a longer time period in this calculation.&lt;/p&gt;
+&lt;p&gt;We can also calculate this over a range of financing options and visualize the result.
+We add the cost of capital and the discounted energy costs over a longer time period in this calculation.&lt;/p&gt;
 &lt;p&gt;We use from Meier 1984,&lt;/p&gt;
-&lt;p&gt;$ CCE =   $&lt;/p&gt;
+&lt;p&gt;$ CCE = \frac{\textrm{investment}}{\textrm{annual energy savings}} \cdot \frac{d}{1 - (1+d)^{-n}} $&lt;/p&gt;
 &lt;p&gt;Where the annualized investment cost now contains the capital recovery function.&lt;/p&gt;
 &lt;h2 id="contour-plotting-of-cost-of-conserved-energy"&gt;Contour plotting of cost of conserved energy&lt;/h2&gt;
 &lt;p&gt;Below I set up a contour plot with the interest rate on the vertical axis and the finance period in years on the horizontal axis.&lt;/p&gt;
@@ -2037,8 +2038,8 @@ cDgcDscq/we8r/3kfQGjhgAAAABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;We can see that the cost of conserved energy is above the 0.50 USD/kWh unless we have loan times of several years at very attractive rates. It is hard to believe that financing this attractive could be available in these rural markets.&lt;/p&gt;
-&lt;p&gt;These efficient refrigerators are not designed for cost-constrained markets. It seems plausible that an attractive market exists in these areas for a product with a reduced initial cost and improved efficiency.&lt;/p&gt;
+&lt;p&gt;We can see that the cost of conserved energy is above the 0.50 USD/kWh unless we have loan times of several years at very attractive rates.  It is hard to believe that financing this attractive could be available in these rural markets.&lt;/p&gt;
+&lt;p&gt;These efficient refrigerators are not designed for cost-constrained markets.  It seems plausible that an attractive market exists in these areas for a product with a reduced initial cost and improved efficiency.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;
@@ -2049,7 +2050,7 @@ cDgcDscq/we8r/3kfQGjhgAAAABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Here I calculate the energy needed to cool a beverage. I also estimate the cost of this energy.&lt;/p&gt;
+&lt;p&gt;Here I calculate the energy needed to cool a beverage.  I also estimate the cost of this energy.&lt;/p&gt;
 &lt;p&gt;I start by calculating the sensible heat that must be extracted from a can or bottle.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2105,11 +2106,14 @@ sensible heat (kWh) = 0.015
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;The energy we must supply is less than this because typical refrigerators can remove more units of heat energy than the units of electrical energy delivered. Even with very expensive electricity ($1/kWh) this would add less than 0.01 USD to the cost of the drink.&lt;/p&gt;
-&lt;p&gt;This is the cost to cool down the drink. We can also estimate the cost to keep the drink stored at a cool temperature.&lt;/p&gt;
-&lt;p&gt;Assumptions: - Refrigerator energy use as stated on product sheet&lt;/p&gt;
-&lt;p&gt;Each beverage has an average residence time in the refrigerator. We can estimate the energy use per can for storage by&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\[ \frac{\textrm{energy used per unit time}}{\textrm{cans sold per unit time}} \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The energy we must supply is less than this because typical refrigerators can remove more units of heat energy than the units of electrical energy delivered.  Even with very expensive electricity ($1/kWh) this would add less than 0.01 USD to the cost of the drink.  &lt;/p&gt;
+&lt;p&gt;This is the cost to cool down the drink.  We can also estimate the cost to keep the drink stored at a cool temperature.&lt;/p&gt;
+&lt;p&gt;Assumptions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Refrigerator energy use as stated on product sheet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Each beverage has an average residence time in the refrigerator.  We can estimate the energy use per can for storage by&lt;/p&gt;
+&lt;p&gt;$$ \frac{\textrm{energy used per unit time}}{\textrm{cans sold per unit time}} $$&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
