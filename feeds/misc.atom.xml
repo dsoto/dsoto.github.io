@@ -1,5 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Soto</title><link href="http://dsoto.github.io/" rel="alternate"></link><link href="http://dsoto.github.io/feeds/misc.atom.xml" rel="self"></link><id>http://dsoto.github.io/</id><updated>2014-07-17T12:00:00-07:00</updated><entry><title>SciPy 2014</title><link href="http://dsoto.github.io/blog/2014/07/17/scipy-2014/" rel="alternate"></link><updated>2014-07-17T12:00:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2014-07-17:blog/2014/07/17/scipy-2014/</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Soto</title><link href="http://dsoto.github.io/" rel="alternate"></link><link href="http://dsoto.github.io/feeds/misc.atom.xml" rel="self"></link><id>http://dsoto.github.io/</id><updated>2014-07-14T14:00:00-07:00</updated><entry><title>SciPy 2014 Wrapup</title><link href="http://dsoto.github.io/blog/2014/07/14/scipy-2014-wrapup/" rel="alternate"></link><updated>2014-07-14T14:00:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2014-07-14:blog/2014/07/14/scipy-2014-wrapup/</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;After many years of observing the conference from a distance, I was able
+to travel to the SciPy conference.  This year the conference hosted a
+track on computation tools and education that inspired many ideas for
+me.&lt;/p&gt;
+&lt;h1&gt;Teaching&lt;/h1&gt;
+&lt;p&gt;All the keynotes and several of the talks focused on the use of
+scientific computing in the classroom.  I left with several ideas both
+in terms of tools and pedagogy to experiment with.  On the third
+day, Greg Wilson from Software Carpentry gave a keynote which framed
+many of the teaching issues beautifully.&lt;/p&gt;
+&lt;h1&gt;Tools&lt;/h1&gt;
+&lt;p&gt;It is very easy to promote a single tool I prefer over other tools.  Greg
+Wilson's keynote noted that he uses popular tools as a trojan horse for
+a more abstract learning objective.  For my own teaching, I'll be sure
+to start with learning objectives rather than focus on my favorite
+tools.&lt;/p&gt;
+&lt;p&gt;For example, many of my students will use spreadsheets early in their
+careers.  What skills around structured data, legible models, and output
+presentation can I teach so that these students are creating
+spreadsheets that are as accurate and illuminating as possible?  While I
+would rather focus on scripting tools over spreadsheet tools, it is
+irresponsible to let this bias guide my teaching.  I do however want to
+start with scripting tools to teach the common math syntax and introduce
+functions so that students have the ability to move between Excel and
+other computational tools easily in their careers.&lt;/p&gt;
+&lt;h1&gt;Massive Collaboration&lt;/h1&gt;
+&lt;p&gt;My teaching materials from my energy classes are on github since
+publishing there is quicker than on my campus content management system.
+Another point Greg Wilson made was that massive scalable collaboration
+should also be brought to educational materials.  This has inspired me
+not only to make materials available but to cultivate a community of
+innovation around my energy teaching materials.&lt;/p&gt;
+&lt;h1&gt;Lowering Barriers&lt;/h1&gt;
+&lt;p&gt;In order for modern computing tools to be useful in the classroom, their
+installation and use must be easy and not create distractions.  I have
+had students use Wakari and SageMathCloud last year and am hoping the
+new Google Drive implementation of the IPython Notebook will be ready
+and robust for the fall.  Since our students are issued Google accounts
+for their email, it is a very attractive solution from an ease of use
+standpoint.&lt;/p&gt;
+&lt;p&gt;This fall I want to again use Python or Julia REPLs as a stepping stone
+between calculators and scripting environments.  I used the Python
+Anywhere IPython web REPL in a class last year.  Unfortunately it is
+Python 2.7 and the configuration to perform proper division created
+confusion and consumed classroom time.  There is a nice online
+REPL for Julia which is very attractive, but I'm reluctant to burden
+students with a syntax transition later in the semester when I move to
+python tools.&lt;/p&gt;
+&lt;h1&gt;Interactivity&lt;/h1&gt;
+&lt;p&gt;Interactive software demonstrations for students have been available for
+a long time.  However, the details are usually obscured from the user by
+a GUI framework.  The addition of lightweight interactivity in the
+IPython Notebook allow me to build an interactive experience for the
+student that also shows them how the model is constructed.  Because the
+IPython interactivity tools are so simple to add, it is easy to imagine
+a novice student being able to extend these interactions.  By doing this
+they deepen their understanding of both the model under study and the
+computational tools to study it.  Lorena Barbara described this
+interaction beautifully as a conversation with the system under study.&lt;/p&gt;
+&lt;h1&gt;Student Libraries&lt;/h1&gt;
+&lt;p&gt;I liked the idea from the lightning talk to create a simple simulation
+library that is extensible by novices, particularly students.  This can
+provide a stepping stone to their involvement in a more complex and
+complete model.  I've been developing a simple solar energy model for
+research and teaching that I think will be useful for students.&lt;/p&gt;
+&lt;h1&gt;Looking Forward&lt;/h1&gt;
+&lt;p&gt;It was encouraging to see how much thought and effort is being put into
+not only the development of these tools but also the way that these
+tools can positively influence the way science is conducted.  I had the
+pleasure of talking with the IPython team and it is clear that they are
+as interested in the scientific outcomes as the tools themselves.  It is
+up to the scientific computing community to highlight which tools are so
+unique and powerful that they deserve resources for development and
+maintenance.  The recent grants for the IPython team and Continuum
+demonstrate that open source scientific software are being seen as real
+tools rather than hobbies.  I hope the community can build on these
+successes, cultivate a sustainable funding stream, and create tools that
+make the discovery, analysis, and communication of science better.&lt;/p&gt;</summary></entry><entry><title>SciPy 2014</title><link href="http://dsoto.github.io/blog/2014/07/07/scipy-2014/" rel="alternate"></link><updated>2014-07-07T12:00:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2014-07-07:blog/2014/07/07/scipy-2014/</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;I'm attending the SciPy conference this year with two main objectives&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Look for best practices to integrate into my research on energy access&lt;/li&gt;

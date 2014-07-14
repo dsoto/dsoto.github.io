@@ -4,7 +4,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>LabJack U12 Data Acquisition Device and IPython Notebook</title>
+  <title>Daniel Soto</title>
   <meta name="author" content="Daniel Soto">
 
 
@@ -1752,220 +1752,29 @@ jQuery(document).ready(function($) {
 </ul></nav>
   <div id="main">
     <div id="content">
-<div>
-  <article class="hentry" role="article">
+<div class="blog-index">
+  		<article>
 <header>
-      <h1 class="entry-title">LabJack U12 Data Acquisition Device and IPython Notebook</h1>
-      <p class="meta"><time datetime="2013-11-11T12:40:00" pubdate>Mon 11 November 2013</time></p>
+      <h1 class="entry-title">
+        <a href="http://dsoto.github.io/blog/2013/08/24/first-week-of-teaching/">First Week of Teaching</a>
+      </h1>
+      <p class="meta"><time datetime="2013-08-24T12:00:00" pubdate>Sat 24 August 2013</time></p>
 </header>
 
   <div class="entry-content"><hr />
-<p>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This notebook has a simple implementation of a current and voltage meter using a LabJack U12 data acquisition device being run within an ipython notebook. This device has multiplatform drivers and was unreasonably easy to set up on my OS X laptop. I used a single click installer from the LabJack website and then downloaded and installed the python library from github.</p>
-<p>I have some new Lithium Iron Phosphate batteries that I wanted to test so I placed a shunt between my battery charger and the battery pack to simultaneously measure the voltage and current delivered to the battery.</p>
-<p>The LabJack platform is appealing since I can create very simple and accessible data acquisition on any platform for the classes I teach. Being able to do a simple acquisition in ~20 lines of code with a ~100 USD device is great.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[1]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="kn">import</span> <span class="nn">u12</span>          <span class="c"># this is the labjack device library</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">datetime</span>
-</pre></div>
+<p>Having just finished my first week teaching at Sonoma State University,
+I wanted to return to my blog after some time away.  This week is a very
+exciting milestone for me since being able to educate the next
+generation about energy issues has been a goal of mine for years ...</p></div>
+  <footer>
+    <a rel="full-article" href="http://dsoto.github.io/blog/2013/08/24/first-week-of-teaching/">Read On &crarr;</a>
+  </footer>
+  		</article>
+<div class="pagination">
 
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[2]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="n">d</span> <span class="o">=</span> <span class="n">u12</span><span class="o">.</span><span class="n">U12</span><span class="p">()</span>       <span class="c"># initializes device</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[3]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="c"># sets up an output data file</span>
-<span class="n">fout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;labjack.txt&#39;</span><span class="p">,</span> <span class="s">&#39;wa&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This defines two convenience functions to encapsulate the details of reading the shunt resistor and battery voltage.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[4]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="c"># channel = 0 sets to single-ended input for AI0</span>
-<span class="k">def</span> <span class="nf">readVoltage</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">d</span><span class="o">.</span><span class="n">eAnalogIn</span><span class="p">(</span><span class="n">channel</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="s">&#39;voltage&#39;</span><span class="p">]</span>
-
-<span class="c"># setting channel to 9 takes the differential between AI2 and AI3</span>
-<span class="c"># gain setting of 7 is for a +/- 1 volt range</span>
-<span class="k">def</span> <span class="nf">readCurrent</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">d</span><span class="o">.</span><span class="n">eAnalogIn</span><span class="p">(</span><span class="n">channel</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="mi">7</span><span class="p">)[</span><span class="s">&#39;voltage&#39;</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Executes a loop to read current and voltage, take timestamp and write to file.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[5]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="c"># get initial timestamp</span>
-<span class="n">start</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="c"># find time interval between start of test and now</span>
-    <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-    <span class="n">ts</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="n">readCurrent</span><span class="p">()</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">readVoltage</span><span class="p">()</span>
-    <span class="c"># write csv to file</span>
-    <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span><span class="o">+</span><span class="s">&#39;,&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">+</span><span class="s">&#39;,&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
-    <span class="n">fout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_text output_pyerr">
-<pre>
-<span class="ansired">---------------------------------------------------------------------------</span>
-<span class="ansired">KeyboardInterrupt</span>                         Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-5-b1e7aeb9c6a1&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">     10</span>     fout<span class="ansiblue">.</span>write<span class="ansiblue">(</span>str<span class="ansiblue">(</span>ts<span class="ansiblue">)</span><span class="ansiblue">+</span><span class="ansiblue">&apos;,&apos;</span><span class="ansiblue">+</span>str<span class="ansiblue">(</span>v<span class="ansiblue">)</span><span class="ansiblue">+</span><span class="ansiblue">&apos;,&apos;</span><span class="ansiblue">+</span>str<span class="ansiblue">(</span>c<span class="ansiblue">)</span><span class="ansiblue">+</span><span class="ansiblue">&apos;\n&apos;</span><span class="ansiblue">)</span><span class="ansiblue"></span>
-<span class="ansigreen">     11</span>     fout<span class="ansiblue">.</span>flush<span class="ansiblue">(</span><span class="ansiblue">)</span><span class="ansiblue"></span>
-<span class="ansigreen">---&gt; 12</span><span class="ansired">     </span>time<span class="ansiblue">.</span>sleep<span class="ansiblue">(</span><span class="ansicyan">1.0</span><span class="ansiblue">)</span><span class="ansiblue"></span>
-
-<span class="ansired">KeyboardInterrupt</span>: </pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This is the output in the file. Note that there is about 30 msec of overhead in the loop. There are ways to do synchronous capture, but most of my energy applications don't need that level of timebase precision.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[6]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">!</span>tail labjack.txt
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-18.564275,4.5947265625,-0.044921875
-19.595143,4.5947265625,-0.04443359375
-20.627395,4.5947265625,-0.04541015625
-21.659249,4.5947265625,-0.044921875
-22.683053,4.5947265625,-0.044921875
-23.715622,4.599609375,-0.044921875
-24.747434,4.6044921875,-0.044921875
-25.779089,4.5947265625,-0.04443359375
-26.80343,4.5947265625,-0.044921875
-27.835673,4.599609375,-0.044921875
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></p>
-<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p></div>
-    <footer>
-<p class="meta">
-  <span class="byline author vcard">
-    Posted by <span class="fn">Daniel Soto</span>
-  </span>
-<time datetime="2013-11-11T12:40:00" pubdate>Mon 11 November 2013</time></p>    </footer>
-  </article>
-
-</div>
+      <a class="next" href="http://dsoto.github.io/index.html">Newer &rarr;</a>
+  <br />
+</div></div>
 <aside class="sidebar">
   <section>
     <h1>Recent Posts</h1>
