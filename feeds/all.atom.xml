@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Soto</title><link href="http://dsoto.github.io/" rel="alternate"></link><link href="http://dsoto.github.io/feeds/all.atom.xml" rel="self"></link><id>http://dsoto.github.io/</id><updated>2014-07-14T14:00:00-07:00</updated><entry><title>SciPy 2014 Wrapup</title><link href="http://dsoto.github.io/blog/2014/07/14/scipy-2014-wrapup/" rel="alternate"></link><updated>2014-07-14T14:00:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2014-07-14:blog/2014/07/14/scipy-2014-wrapup/</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Daniel Soto</title><link href="http://dsoto.github.io/" rel="alternate"></link><link href="http://dsoto.github.io/feeds/all.atom.xml" rel="self"></link><id>http://dsoto.github.io/</id><updated>2014-11-03T12:00:00-08:00</updated><entry><title>Preparing class materials using Markdown, Github, and Moodle</title><link href="http://dsoto.github.io/blog/2014/11/03/preparing-class-materials-using-markdown-github-and-moodle/" rel="alternate"></link><updated>2014-11-03T12:00:00-08:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2014-11-03:blog/2014/11/03/preparing-class-materials-using-markdown-github-and-moodle/</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;A few months ago, I wrote about the way I use Markdown, a simple syntax
+for content generation in my writing and teaching.
+In this post, I document how I use Moodle, Github, and Dexy to easily
+update and publish materials for my class.&lt;/p&gt;
+&lt;p&gt;Since I am still early in my teaching career, my materials change
+frequently.  Our school uses, Moodle, as a content management system but
+I found re-uploading static PDF files of my work to be cumbersome and
+error prone.&lt;/p&gt;
+&lt;p&gt;Since Github renders markdown quite nicely, I place my materials in a
+github repo and then create URL links on Moodle that point at that page.
+This allows me to update my materials with a simple git push command
+from my computer.  If I don't remove or rename the file, the Moodle URL
+link remains valid and any corrections are available to the class
+immediately.&lt;/p&gt;
+&lt;p&gt;I've been sharing my syllabus electronically like this for a while now,
+but I've started linking to other materials as well.&lt;/p&gt;
+&lt;p&gt;This year I started using Dexy to create the Markdown.  One pain point
+in syllabus creation is the inclusion of a table with topics and
+assignments listed by dates.  Since in even a mature curriculum this is
+prone to change, updating and uploading an embedded table in a word
+processing document was not appealing.  I keep the schedule in a table
+format in an Excel spreadsheet.  Then I use Dexy and a python script to
+parse the xlsx file, create markdown tables, and insert them into my
+syllabus.  This means to change the schedule I can edit the excel file,
+compile the markdown file, and then push to github where the syllabus
+will be viewable by the class.  While it was a few hours of initial (and
+enjoyable) investment, being able to update easily and rapidly has been
+worth it.&lt;/p&gt;</summary></entry><entry><title>SciPy 2014 Wrapup</title><link href="http://dsoto.github.io/blog/2014/07/14/scipy-2014-wrapup/" rel="alternate"></link><updated>2014-07-14T14:00:00-07:00</updated><author><name>Daniel Soto</name></author><id>tag:dsoto.github.io,2014-07-14:blog/2014/07/14/scipy-2014-wrapup/</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;After many years of observing the conference from a distance, I was able
 to travel to the SciPy conference.  This year the conference hosted a
 track on computation tools and education that inspired many ideas for

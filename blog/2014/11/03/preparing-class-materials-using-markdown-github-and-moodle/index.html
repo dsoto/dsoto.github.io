@@ -4,7 +4,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Daniel Soto</title>
+  <title>Preparing class materials using Markdown, Github, and Moodle</title>
   <meta name="author" content="Daniel Soto">
 
 
@@ -1752,12 +1752,10 @@ jQuery(document).ready(function($) {
 </ul></nav>
   <div id="main">
     <div id="content">
-<div class="blog-index">
-  		<article>
+<div>
+  <article class="hentry" role="article">
 <header>
-      <h1 class="entry-title">
-        <a href="http://dsoto.github.io/blog/2014/11/03/preparing-class-materials-using-markdown-github-and-moodle/">Preparing class materials using Markdown, Github, and Moodle</a>
-      </h1>
+      <h1 class="entry-title">Preparing class materials using Markdown, Github, and Moodle</h1>
       <p class="meta"><time datetime="2014-11-03T12:00:00" pubdate>Mon 03 November 2014</time></p>
 </header>
 
@@ -1766,214 +1764,39 @@ jQuery(document).ready(function($) {
 for content generation in my writing and teaching.
 In this post, I document how I use Moodle, Github, and Dexy to easily
 update and publish materials for my class.</p>
-<p>Since I am still early in ...</p></div>
-  <footer>
-    <a rel="full-article" href="http://dsoto.github.io/blog/2014/11/03/preparing-class-materials-using-markdown-github-and-moodle/">Read On &crarr;</a>
-  </footer>
-  		</article>
-  		<article>
-<header>
-      <h1 class="entry-title">
-        <a href="http://dsoto.github.io/blog/2014/07/14/scipy-2014-wrapup/">SciPy 2014 Wrapup</a>
-      </h1>
-      <p class="meta"><time datetime="2014-07-14T14:00:00" pubdate>Mon 14 July 2014</time></p>
-</header>
+<p>Since I am still early in my teaching career, my materials change
+frequently.  Our school uses, Moodle, as a content management system but
+I found re-uploading static PDF files of my work to be cumbersome and
+error prone.</p>
+<p>Since Github renders markdown quite nicely, I place my materials in a
+github repo and then create URL links on Moodle that point at that page.
+This allows me to update my materials with a simple git push command
+from my computer.  If I don't remove or rename the file, the Moodle URL
+link remains valid and any corrections are available to the class
+immediately.</p>
+<p>I've been sharing my syllabus electronically like this for a while now,
+but I've started linking to other materials as well.</p>
+<p>This year I started using Dexy to create the Markdown.  One pain point
+in syllabus creation is the inclusion of a table with topics and
+assignments listed by dates.  Since in even a mature curriculum this is
+prone to change, updating and uploading an embedded table in a word
+processing document was not appealing.  I keep the schedule in a table
+format in an Excel spreadsheet.  Then I use Dexy and a python script to
+parse the xlsx file, create markdown tables, and insert them into my
+syllabus.  This means to change the schedule I can edit the excel file,
+compile the markdown file, and then push to github where the syllabus
+will be viewable by the class.  While it was a few hours of initial (and
+enjoyable) investment, being able to update easily and rapidly has been
+worth it.</p></div>
+    <footer>
+<p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">Daniel Soto</span>
+  </span>
+<time datetime="2014-11-03T12:00:00" pubdate>Mon 03 November 2014</time></p>    </footer>
+  </article>
 
-  <div class="entry-content"><hr />
-<p>After many years of observing the conference from a distance, I was able
-to travel to the SciPy conference.  This year the conference hosted a
-track on computation tools and education that inspired many ideas for
-me.</p>
-<h1>Teaching</h1>
-<p>All the keynotes and several of the talks focused on the use ...</p></div>
-  <footer>
-    <a rel="full-article" href="http://dsoto.github.io/blog/2014/07/14/scipy-2014-wrapup/">Read On &crarr;</a>
-  </footer>
-  		</article>
-  		<article>
-<header>
-      <h1 class="entry-title">
-        <a href="http://dsoto.github.io/blog/2014/07/07/scipy-2014/">SciPy 2014</a>
-      </h1>
-      <p class="meta"><time datetime="2014-07-07T12:00:00" pubdate>Mon 07 July 2014</time></p>
-</header>
-
-  <div class="entry-content"><hr />
-<p>I'm attending the SciPy conference this year with two main objectives</p>
-<ul>
-<li>Look for best practices to integrate into my research on energy access</li>
-<li>Look for best practices to integrate into my teaching</li>
-</ul>
-<h1>Energy software</h1>
-<p>I'm interested in the development of open-source solutions in the
-small-scale energy analysis space ...</p></div>
-  <footer>
-    <a rel="full-article" href="http://dsoto.github.io/blog/2014/07/07/scipy-2014/">Read On &crarr;</a>
-  </footer>
-  		</article>
-  		<article>
-<header>
-      <h1 class="entry-title">
-        <a href="http://dsoto.github.io/blog/2014/06/16/equivalent-apr-of-m-kopa-financing/">Equivalent APR of M-KOPA Financing</a>
-      </h1>
-      <p class="meta"><time datetime="2014-06-16T12:00:00" pubdate>Mon 16 June 2014</time></p>
-</header>
-
-  <div class="entry-content"><hr />
-<p>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Many customers are unable to purchase solar home systems for lighting and phone charging without a financing option.  For a customer to compare between the rate available from a microfinance lender and a company that provides in-house finance, they must compare the effective interest rates.  M-KOPA advertises their deposit and ...</p></div></div></div></p></div>
-  <footer>
-    <a rel="full-article" href="http://dsoto.github.io/blog/2014/06/16/equivalent-apr-of-m-kopa-financing/">Read On &crarr;</a>
-  </footer>
-  		</article>
-  		<article>
-<header>
-      <h1 class="entry-title">
-        <a href="http://dsoto.github.io/blog/2014/06/12/markdown-and-pandoc-for-writing/">Markdown and Pandoc for writing</a>
-      </h1>
-      <p class="meta"><time datetime="2014-06-12T10:00:00" pubdate>Thu 12 June 2014</time></p>
-</header>
-
-  <div class="entry-content"><hr />
-<p>I've been using Markdown, a plain text lightweight markup language in
-combination with Pandoc, a versatile document converter to do the bulk
-of my writing.</p>
-<p>The benefits</p>
-<ul>
-<li>I can use the same text editing tools for my computing work as well as
-  my writing work.</li>
-<li>With a generic makefile ...</li></ul></div>
-  <footer>
-    <a rel="full-article" href="http://dsoto.github.io/blog/2014/06/12/markdown-and-pandoc-for-writing/">Read On &crarr;</a>
-  </footer>
-  		</article>
-  		<article>
-<header>
-      <h1 class="entry-title">
-        <a href="http://dsoto.github.io/blog/2014/01/31/class-lectures-in-markdown/">Class Lectures in Markdown</a>
-      </h1>
-      <p class="meta"><time datetime="2014-01-31T20:00:00" pubdate>Fri 31 January 2014</time></p>
-</header>
-
-  <div class="entry-content"><hr />
-<p>I have a workflow that I'm happy with for creating, rendering, and
-archiving, slide content for my classes.</p>
-<p>I have a single file that contains stubs for the entire semester's
-lectures.  This allows me to quickly capture ideas for future lectures
-without leaving the file.</p>
-<p>At the beginning ...</p></div>
-  <footer>
-    <a rel="full-article" href="http://dsoto.github.io/blog/2014/01/31/class-lectures-in-markdown/">Read On &crarr;</a>
-  </footer>
-  		</article>
-  		<article>
-<header>
-      <h1 class="entry-title">
-        <a href="http://dsoto.github.io/blog/2013/11/11/labjack-u12-data-acquisition-device-and-ipython-notebook/">LabJack U12 Data Acquisition Device and IPython Notebook</a>
-      </h1>
-      <p class="meta"><time datetime="2013-11-11T12:40:00" pubdate>Mon 11 November 2013</time></p>
-</header>
-
-  <div class="entry-content"><hr />
-<p>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This notebook has a simple implementation of a current and voltage meter using a LabJack U12 data acquisition device being run within an ipython notebook.  This device has multiplatform drivers and was unreasonably easy to set up on my OS X laptop.  I used a single click installer from the ...</p></div></div></div></p></div>
-  <footer>
-    <a rel="full-article" href="http://dsoto.github.io/blog/2013/11/11/labjack-u12-data-acquisition-device-and-ipython-notebook/">Read On &crarr;</a>
-  </footer>
-  		</article>
-  		<article>
-<header>
-      <h1 class="entry-title">
-        <a href="http://dsoto.github.io/blog/2013/10/18/refrigeration-lifecycle-costs-and-insulation-thickness/">Refrigeration lifecycle costs and insulation thickness</a>
-      </h1>
-      <p class="meta"><time datetime="2013-10-18T12:30:00" pubdate>Fri 18 October 2013</time></p>
-</header>
-
-  <div class="entry-content"><hr />
-<p>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>These calculations estimate the optimal thickness of insulation for a simplified refrigerator model.  The life-cycle cost considers both the first cost of purchasing insulation and the operational cost of buying electricity to power the refrigerator.  We assume that the other costs (exterior, compressor, etc.) are fixed with the insulation thickness ...</p></div></div></div></p></div>
-  <footer>
-    <a rel="full-article" href="http://dsoto.github.io/blog/2013/10/18/refrigeration-lifecycle-costs-and-insulation-thickness/">Read On &crarr;</a>
-  </footer>
-  		</article>
-  		<article>
-<header>
-      <h1 class="entry-title">
-        <a href="http://dsoto.github.io/blog/2013/10/10/refrigeration-cost-of-conserved-energy/">Refrigeration cost of conserved energy</a>
-      </h1>
-      <p class="meta"><time datetime="2013-10-10T11:40:00" pubdate>Thu 10 October 2013</time></p>
-</header>
-
-  <div class="entry-content"><hr />
-<p>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Typical refrigerators in rural environments with photovoltaic electricity tend to strain the inverters.  There are some very energy efficient refrigerator models as well but the cost for these units is much higher.</p>
-<p>We compare between two representative refrigerators.</p>
-<p>A typical refrigerator is the Haier, which is basically what we in ...</p></div></div></div></p></div>
-  <footer>
-    <a rel="full-article" href="http://dsoto.github.io/blog/2013/10/10/refrigeration-cost-of-conserved-energy/">Read On &crarr;</a>
-  </footer>
-  		</article>
-  		<article>
-<header>
-      <h1 class="entry-title">
-        <a href="http://dsoto.github.io/blog/2013/10/10/energy-cost-of-beverage-cooling/">Energy cost of beverage cooling</a>
-      </h1>
-      <p class="meta"><time datetime="2013-10-10T09:50:00" pubdate>Thu 10 October 2013</time></p>
-</header>
-
-  <div class="entry-content"><hr />
-<p>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Here I calculate the energy needed to cool a beverage.  I also estimate the cost of this energy.</p>
-<p>I start by calculating the sensible heat that must be extracted from a can or bottle.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[7]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="n">volume_l</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="n">temperature_difference_K</span> <span class="o">=</span> <span class="mf">25.0</span>
-<span class="n">density_water_g_per_l</span> <span class="o">=</span> <span class="mf">1000.</span>
-<span class="n">heat_capacity_water_J_gK</span> <span class="o">=</span> <span class="mf">4.1855</span>
-<span class="n">kWh_per_joule</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mf">3600000 ...</span></pre></div></div></div></div></div></p></div>
-  <footer>
-    <a rel="full-article" href="http://dsoto.github.io/blog/2013/10/10/energy-cost-of-beverage-cooling/">Read On &crarr;</a>
-  </footer>
-  		</article>
-<div class="pagination">
-    <a class="prev" href="http://dsoto.github.io/category/misc2.html">&larr; Older</a>
-
-  <br />
-</div></div>
 <aside class="sidebar">
   <section>
     <h1>Recent Posts</h1>
